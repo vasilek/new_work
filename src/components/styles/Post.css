@@ -1,0 +1,22 @@
+.reply {
+  display: inline-block;
+  min-width: 26.4em;
+  max-width: 100%;
+  background: #DDDDDD;
+  border: solid 1px #CCCCCC;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.post.reply .post-message {
+    max-height: 600px;
+}
+
+.post .post-message {
+    overflow: auto;
+}
+blockquote {
+    display: block;
+    margin: 1em 35px;
+}

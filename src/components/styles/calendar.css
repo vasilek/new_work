@@ -1,0 +1,153 @@
+.rc-Day {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #eeeeee;
+    cursor: pointer;
+    background-color: white;
+}
+
+.rc-Day--outside {
+    cursor: default;
+    color: #eeeeee;
+}
+
+.calendar-legend {
+  position: absolute;
+  top: 137px;
+  right: 38px;
+}
+
+.calendar-legend span {
+  line-height: 25px;
+  padding: 0 3px;
+}
+
+.calendar-dash{
+      font-size: 20px;
+}
+
+.calendar-day-name {
+  font-size: 12px;
+  line-height: 29px!important;
+}
+
+.single-block > div{
+  outline: 1px solid black;
+}
+
+.single-block {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+.holiday-day {
+  height: 30px;
+  width: 30px;
+  background: rgba(255, 192, 203, 0.71);
+}
+
+.short-day {
+  height: 30px;
+  width: 30px;
+  background: rgba(255,255,0,0.6);
+}
+
+.work-day {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+}
+
+.rc-Week-number {
+    color: #777777;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+}
+
+.calendar-legend > img {
+  height: 100px;
+      width: 142px;
+      position: absolute;
+      top: 173px;
+      right: 41px;
+}
+
+.rc-Calendar-header {
+    text-align: center;
+    font-weight: bolder;
+    margin-right: 130px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.rc-Day.day-type-1 {
+    background: rgba(255,255,0,0.6);
+}
+
+.rc-Day.day-type-2 {
+  background: rgba(255, 192, 203, 0.71);
+}
+
+.nextYear {
+    float: right;
+}
+
+.rc-Month--current .rc-Month-header {
+    color: #428bca;
+}
+
+.rc-Month {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 20px 10px;
+}
+
+.rc-Calendar-header {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.rc-Month-header {
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 39px;
+}
+
+.rc-Week:last-child .rc-Week-days {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.calendar-container {
+  font-size: 12px;
+}
+
+.rc-Month-weekdays {
+    margin-left: 32px;
+}
+
+.rc-Month-weekdays-weekday {
+    display: inline-block;
+    width: 35px;
+    height: 15px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.rc-Week-days {
+    border-left: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+    display: inline-block;
+}
+
+.rc-Week {
+    height: 32px;
+}

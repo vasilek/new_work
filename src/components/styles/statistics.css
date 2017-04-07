@@ -1,0 +1,237 @@
+.statistics-page .close-right-panel {
+    display: none;
+}
+
+.weekPicker > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weekPicker img {
+  height: 15px!important;
+  width: 15px!important;
+  margin-top: 20px!important;
+}
+
+.normativeBlock {
+  background-color: #6FA8DC;
+  outline: 1px black solid;
+}
+
+.overworkBlock{
+  background-color: #E06666;
+  outline: 1px black solid;
+}
+
+.user-report-select{
+  margin: 0 5px;
+}
+
+.elements-report-select{
+  margin: 0 5px;
+}
+
+.reports-header > h3 {
+  align-self: flex-start;
+  font-weight:600;
+  margin-bottom: 2px;
+    margin-top: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.reports-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+.statistics-page >div:first-child {
+  font-family:serif;
+}
+
+.workdoneBlock{
+  background-color: #6AA84F;
+  outline: 1px black solid;
+}
+
+
+
+.underworkBlock {
+  background-color: #FFD966;
+  outline: 1px black solid;
+}
+
+.containerBlock{
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  border-bottom: 1px solid black;
+}
+
+
+.hoursBlock{
+ min-width: 100%;
+ max-width: 100%;
+ display: flex;
+ flex-direction: column;
+   padding: 15px 0;
+
+}
+
+.workChartContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+  min-height: 80%;
+}
+
+.workChartContainer .taskBlock {
+  padding: 0 10px;
+}
+
+.upperBlock{
+  display: flex;
+  flex-direction: row;
+  margin: 2px 0;
+}
+
+.lowerBlock{
+  display: flex;
+  flex-direction: row;
+  margin: 2px 0;
+}
+
+.innerTaskContainerBlock {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.innerHoursContainerBlock{
+  text-align: center;
+  width: 60%;
+  flex-direction: row;
+  align-items: center;
+  border-left: 1px solid black;
+  padding-left: 15px;
+}
+
+.taskBlock {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.taskBlock > div {
+  padding: 4px;
+}
+
+.taskBlock > div{
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  min-width: 100px;
+  text-align: center;;
+}
+
+
+.dayPicker > div  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weekPicker .tableCalendar {
+  display: none;
+}
+
+.weekPicker .weekVisualiser {
+  height:20px;
+  line-height: 26px;
+  cursor: pointer;
+  font-size:16px;
+  margin: 0 4px;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+.statistics-type-choose-radio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 5px;
+  margin-top: 10px;
+}
+
+.statistics-type-choose-radio > div > div > div {
+  margin-right: 0!important;
+}
+
+.statistics-type-choose-radio>div {
+  width:33%!important;
+}
+
+.reports-header{
+  text-align: left;
+}
+
+@media all and (max-width: 1800px) {
+  .weekPicker .weekVisualiser {
+    font-size: 14px;
+  }
+}
+
+.weekPicker input {
+  height: 10px;
+  color:white;
+  border: none!important;
+  outline: none!important;
+}
+
+
+.top-statistics-buttons-container button{
+  margin-top: 15px!important;
+  border-style: solid!important;
+border-width: 1px!important;
+border-color: #c1c1c1!important;
+}
+
+.from-to {
+  width: 30%;
+  vertical-align: bottom;
+  height: 18px;
+font-size: 18px;
+font-weight: bold;
+}
+
+.weekPicker {
+  font-size: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.button-statistics-create > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weekPicker > div>div>span {
+  display: none;
+}
+.weekPicker > div > div {
+  width:70%!important;
+}
+
+.weekPicker .dateContainer {
+  display: flex;
+  flex-direction: column;
+}

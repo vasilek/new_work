@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="ed771edf-1f0f-4955-9b7a-6d7f12c7f225" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Icons/human.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Icons/people.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Modals/PersonModal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/PersonModalContainer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static_old/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/jszip.min.js" afterPath="$PROJECT_DIR$/static_old/js/jszip.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static_old/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/xlsx.full.min.js" afterPath="$PROJECT_DIR$/static_old/js/xlsx.full.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/acceptTrud.4b93446c.svg" afterPath="$PROJECT_DIR$/static_old/media/acceptTrud.4b93446c.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/briefcase.ff5c7957.svg" afterPath="$PROJECT_DIR$/static_old/media/briefcase.ff5c7957.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/calendar-legend.5fe1beb4.svg" afterPath="$PROJECT_DIR$/static_old/media/calendar-legend.5fe1beb4.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/calendar.57f73f9d.svg" afterPath="$PROJECT_DIR$/static_old/media/calendar.57f73f9d.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/clock.6682c844.svg" afterPath="$PROJECT_DIR$/static_old/media/clock.6682c844.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/comment.78570464.svg" afterPath="$PROJECT_DIR$/static_old/media/comment.78570464.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/cursor.8037541e.svg" afterPath="$PROJECT_DIR$/static_old/media/cursor.8037541e.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/decline.d6d61595.svg" afterPath="$PROJECT_DIR$/static_old/media/decline.d6d61595.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/delete-photo.0a0d79fb.svg" afterPath="$PROJECT_DIR$/static_old/media/delete-photo.0a0d79fb.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/delete.3b080f7e.svg" afterPath="$PROJECT_DIR$/static_old/media/delete.3b080f7e.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/devil.2e7b4893.svg" afterPath="$PROJECT_DIR$/static_old/media/devil.2e7b4893.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/edit.a9837205.svg" afterPath="$PROJECT_DIR$/static_old/media/edit.a9837205.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/ellipsis.451fd75b.svg" afterPath="$PROJECT_DIR$/static_old/media/ellipsis.451fd75b.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/excel.5c7bda4d.svg" afterPath="$PROJECT_DIR$/static_old/media/excel.5c7bda4d.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/fast-forward.67c7ef64.svg" afterPath="$PROJECT_DIR$/static_old/media/fast-forward.67c7ef64.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/filter.e9d6e603.svg" afterPath="$PROJECT_DIR$/static_old/media/filter.e9d6e603.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/hamburger.9fa7fd37.svg" afterPath="$PROJECT_DIR$/static_old/media/hamburger.9fa7fd37.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/left.427f7f4e.svg" afterPath="$PROJECT_DIR$/static_old/media/left.427f7f4e.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/menu.15009fc6.svg" afterPath="$PROJECT_DIR$/static_old/media/menu.15009fc6.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/next.6ef52c6a.svg" afterPath="$PROJECT_DIR$/static_old/media/next.6ef52c6a.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/right.77d24b85.svg" afterPath="$PROJECT_DIR$/static_old/media/right.77d24b85.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/rubbish-bin.77dbda87.svg" afterPath="$PROJECT_DIR$/static_old/media/rubbish-bin.77dbda87.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/20b01f6f/jquery.js" afterPath="$PROJECT_DIR$/assets/20b01f6f/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/libs/all.js" afterPath="$PROJECT_DIR$/dist/libs/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/libs/vendors.min.js" afterPath="$PROJECT_DIR$/dist/libs/vendors.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="$PROJECT_DIR$/src/App.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/Code.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/Code.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/Codes.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/Codes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/Department.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/Department.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/DepartmentToSend.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/DepartmentToSend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/DepartmentTree.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/DepartmentTree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/Finance.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/Finance.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/Finances.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/Finances.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/User.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/User.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/UserToSend.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/UserToSend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Admin/Users.js" afterPath="$PROJECT_DIR$/src/Entities/Admin/Users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Posts/PostParser.js" afterPath="$PROJECT_DIR$/src/Entities/Posts/PostParser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Table/TableData.js" afterPath="$PROJECT_DIR$/src/Entities/Table/TableData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Tasks/Labor.js" afterPath="$PROJECT_DIR$/src/Entities/Tasks/Labor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Tasks/LaborToSend.js" afterPath="$PROJECT_DIR$/src/Entities/Tasks/LaborToSend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Tasks/Task.js" afterPath="$PROJECT_DIR$/src/Entities/Tasks/Task.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Tasks/TaskToSend.js" afterPath="$PROJECT_DIR$/src/Entities/Tasks/TaskToSend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/Tasks/TaskTree.js" afterPath="$PROJECT_DIR$/src/Entities/Tasks/TaskTree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/Icon.js" afterPath="$PROJECT_DIR$/src/Icons/Icon.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/acceptTrud.svg" afterPath="$PROJECT_DIR$/src/Icons/acceptTrud.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/calendar.svg" afterPath="$PROJECT_DIR$/src/Icons/calendar.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/clock.svg" afterPath="$PROJECT_DIR$/src/Icons/clock.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/comment.svg" afterPath="$PROJECT_DIR$/src/Icons/comment.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/decline.svg" afterPath="$PROJECT_DIR$/src/Icons/decline.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/delete-photo.svg" afterPath="$PROJECT_DIR$/src/Icons/delete-photo.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/delete.svg" afterPath="$PROJECT_DIR$/src/Icons/delete.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/devil.svg" afterPath="$PROJECT_DIR$/src/Icons/devil.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/edit.svg" afterPath="$PROJECT_DIR$/src/Icons/edit.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/ellipsis.svg" afterPath="$PROJECT_DIR$/src/Icons/ellipsis.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/excel.svg" afterPath="$PROJECT_DIR$/src/Icons/excel.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/fast-forward.svg" afterPath="$PROJECT_DIR$/src/Icons/fast-forward.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/filter.svg" afterPath="$PROJECT_DIR$/src/Icons/filter.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/hamburger.svg" afterPath="$PROJECT_DIR$/src/Icons/hamburger.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/left.svg" afterPath="$PROJECT_DIR$/src/Icons/left.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/next.svg" afterPath="$PROJECT_DIR$/src/Icons/next.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/right.svg" afterPath="$PROJECT_DIR$/src/Icons/right.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Icons/rubbish-bin.svg" afterPath="$PROJECT_DIR$/src/Icons/rubbish-bin.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LayoutContainer.js" afterPath="$PROJECT_DIR$/src/LayoutContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Admin.js" afterPath="$PROJECT_DIR$/src/Routes/Admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/App.css" afterPath="$PROJECT_DIR$/src/Routes/App.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Home.js" afterPath="$PROJECT_DIR$/src/Routes/Home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Login.js" afterPath="$PROJECT_DIR$/src/Routes/Login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Reports.js" afterPath="$PROJECT_DIR$/src/Routes/Reports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Statistics.js" afterPath="$PROJECT_DIR$/src/Routes/Statistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Subordinates.js" afterPath="$PROJECT_DIR$/src/Routes/Subordinates.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/Tasks.js" afterPath="$PROJECT_DIR$/src/Routes/Tasks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/TasksTable.js" afterPath="$PROJECT_DIR$/src/Routes/TasksTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Routes/routes.js" afterPath="$PROJECT_DIR$/src/Routes/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/Calendar.js" afterPath="$PROJECT_DIR$/src/components/Admin/Calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/CodesList.js" afterPath="$PROJECT_DIR$/src/components/Admin/CodesList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/DepartmentInfo.js" afterPath="$PROJECT_DIR$/src/components/Admin/DepartmentInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/FinancesList.js" afterPath="$PROJECT_DIR$/src/components/Admin/FinancesList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/NewDepartmentInfo.js" afterPath="$PROJECT_DIR$/src/components/Admin/NewDepartmentInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/NewUserInfo.js" afterPath="$PROJECT_DIR$/src/components/Admin/NewUserInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/RightDepartmentPanel.js" afterPath="$PROJECT_DIR$/src/components/Admin/RightDepartmentPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/RightUserPanel.js" afterPath="$PROJECT_DIR$/src/components/Admin/RightUserPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/StateStructure.js" afterPath="$PROJECT_DIR$/src/components/Admin/StateStructure.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/UserInfo.js" afterPath="$PROJECT_DIR$/src/components/Admin/UserInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Admin/UsersList.js" afterPath="$PROJECT_DIR$/src/components/Admin/UsersList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Container.js" afterPath="$PROJECT_DIR$/src/components/Container.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/GlobalHeader.js" afterPath="$PROJECT_DIR$/src/components/GlobalHeader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LeftNav.js" afterPath="$PROJECT_DIR$/src/components/LeftNav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Modals/AddTrudModal.js" afterPath="$PROJECT_DIR$/src/components/Modals/AddTrudModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Modals/ConfirmModal.js" afterPath="$PROJECT_DIR$/src/components/Modals/ConfirmModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Modals/DeclineTrudModal.js" afterPath="$PROJECT_DIR$/src/components/Modals/DeclineTrudModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Modals/FilterModal.js" afterPath="$PROJECT_DIR$/src/components/Modals/FilterModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Modals/PasswordChangeModal.js" afterPath="$PROJECT_DIR$/src/components/Modals/PasswordChangeModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Modals/ValidationErrorsModal.js" afterPath="$PROJECT_DIR$/src/components/Modals/ValidationErrorsModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Reports/LeftReportsPanel.js" afterPath="$PROJECT_DIR$/src/components/Reports/LeftReportsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Reports/ReportsTable.js" afterPath="$PROJECT_DIR$/src/components/Reports/ReportsTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Reports/RightReportsPanel.js" afterPath="$PROJECT_DIR$/src/components/Reports/RightReportsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/RightPanel.js" afterPath="$PROJECT_DIR$/src/components/RightPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SideBar.js" afterPath="$PROJECT_DIR$/src/components/SideBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Spinner.js" afterPath="$PROJECT_DIR$/src/components/Spinner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Statistics/LeftStatisticsPanel.js" afterPath="$PROJECT_DIR$/src/components/Statistics/LeftStatisticsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Statistics/RightStatisticsPanel.js" afterPath="$PROJECT_DIR$/src/components/Statistics/RightStatisticsPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Statistics/Statistics.js" afterPath="$PROJECT_DIR$/src/components/Statistics/Statistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Statistics/statisticsHelpers.js" afterPath="$PROJECT_DIR$/src/components/Statistics/statisticsHelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/RightTablePanel.js" afterPath="$PROJECT_DIR$/src/components/Table/RightTablePanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/TaskTable.js" afterPath="$PROJECT_DIR$/src/components/Table/TaskTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/tableHelpers.js" afterPath="$PROJECT_DIR$/src/components/Table/tableHelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/LaborInfo.js" afterPath="$PROJECT_DIR$/src/components/Tasks/LaborInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/LaborList.js" afterPath="$PROJECT_DIR$/src/components/Tasks/LaborList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/NewTaskInfo.js" afterPath="$PROJECT_DIR$/src/components/Tasks/NewTaskInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/RightTaskPanel.js" afterPath="$PROJECT_DIR$/src/components/Tasks/RightTaskPanel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/TaskCommentsTab.js" afterPath="$PROJECT_DIR$/src/components/Tasks/TaskCommentsTab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/TaskInfo.js" afterPath="$PROJECT_DIR$/src/components/Tasks/TaskInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/TaskList.js" afterPath="$PROJECT_DIR$/src/components/Tasks/TaskList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/TaskTrudTab.js" afterPath="$PROJECT_DIR$/src/components/Tasks/TaskTrudTab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tasks/taskHelpers.js" afterPath="$PROJECT_DIR$/src/components/Tasks/taskHelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Toolbar.js" afterPath="$PROJECT_DIR$/src/components/Toolbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/formComponents/DatePicker.js" afterPath="$PROJECT_DIR$/src/components/formComponents/DatePicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/formComponents/ReusableComponents.js" afterPath="$PROJECT_DIR$/src/components/formComponents/ReusableComponents.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/formComponents/SelectAsyncInput.js" afterPath="$PROJECT_DIR$/src/components/formComponents/SelectAsyncInput.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/formComponents/SelectInput.js" afterPath="$PROJECT_DIR$/src/components/formComponents/SelectInput.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/Container.css" afterPath="$PROJECT_DIR$/src/components/styles/Container.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/GlobalHeader.css" afterPath="$PROJECT_DIR$/src/components/styles/GlobalHeader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/LeftNav.css" afterPath="$PROJECT_DIR$/src/components/styles/LeftNav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/Link.css" afterPath="$PROJECT_DIR$/src/components/styles/Link.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/Modal.css" afterPath="$PROJECT_DIR$/src/components/styles/Modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/Post.css" afterPath="$PROJECT_DIR$/src/components/styles/Post.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/RightPanel.css" afterPath="$PROJECT_DIR$/src/components/styles/RightPanel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/SideBar.css" afterPath="$PROJECT_DIR$/src/components/styles/SideBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/TaskCommentsTab.css" afterPath="$PROJECT_DIR$/src/components/styles/TaskCommentsTab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/TaskInfo.css" afterPath="$PROJECT_DIR$/src/components/styles/TaskInfo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/TaskList.css" afterPath="$PROJECT_DIR$/src/components/styles/TaskList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/TaskTrudTab.css" afterPath="$PROJECT_DIR$/src/components/styles/TaskTrudTab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/Toolbar.css" afterPath="$PROJECT_DIR$/src/components/styles/Toolbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/calendar.css" afterPath="$PROJECT_DIR$/src/components/styles/calendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/reportsTable.css" afterPath="$PROJECT_DIR$/src/components/styles/reportsTable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/statistics.css" afterPath="$PROJECT_DIR$/src/components/styles/statistics.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/styles/taskTable.css" afterPath="$PROJECT_DIR$/src/components/styles/taskTable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/utils/listGenerator.js" afterPath="$PROJECT_DIR$/src/components/utils/listGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/utils/tableGenerator.js" afterPath="$PROJECT_DIR$/src/components/utils/tableGenerator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/CalendarContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/CalendarContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/CodesContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/CodesContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/DepartmentInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/DepartmentInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/FinancesContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/FinancesContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/NewDepartmentInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/NewDepartmentInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/NewUserInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/NewUserInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/RightDepartmentPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/RightDepartmentPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/RightUserPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/RightUserPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/StateStructureContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/StateStructureContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/UserInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/UserInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Admin/UsersContainer.js" afterPath="$PROJECT_DIR$/src/containers/Admin/UsersContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Containers.js" afterPath="$PROJECT_DIR$/src/containers/Containers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LaborInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/LaborInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LayoutContainers/GlobalHeaderContainer.js" afterPath="$PROJECT_DIR$/src/containers/LayoutContainers/GlobalHeaderContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LayoutContainers/LeftNavContainer.js" afterPath="$PROJECT_DIR$/src/containers/LayoutContainers/LeftNavContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LayoutContainers/RightPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/LayoutContainers/RightPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LayoutContainers/SideBarContainer.js" afterPath="$PROJECT_DIR$/src/containers/LayoutContainers/SideBarContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LayoutContainers/SpinnerContainer.js" afterPath="$PROJECT_DIR$/src/containers/LayoutContainers/SpinnerContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/LayoutContainers/ToolbarContainer.js" afterPath="$PROJECT_DIR$/src/containers/LayoutContainers/ToolbarContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ModalContainers/AddTrudModalContainer.js" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/AddTrudModalContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ModalContainers/ConfirmModalContainer.js" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/ConfirmModalContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ModalContainers/DeclineTrudModalContainer.js" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/DeclineTrudModalContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ModalContainers/FilterModalContainer.js" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/FilterModalContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ModalContainers/PasswordChangeModalContainer.js" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/PasswordChangeModalContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ModalContainers/ValidationErrorsModalContainer.js" afterPath="$PROJECT_DIR$/src/containers/ModalContainers/ValidationErrorsModalContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Reports/LeftReportsPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Reports/LeftReportsPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Reports/ReportsTableContainer.js" afterPath="$PROJECT_DIR$/src/containers/Reports/ReportsTableContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Reports/RightReportsPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Reports/RightReportsPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Statistics/LeftStatisticsPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Statistics/LeftStatisticsPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Statistics/RightStatisticsPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Statistics/RightStatisticsPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Statistics/StatisticsContainer.js" afterPath="$PROJECT_DIR$/src/containers/Statistics/StatisticsContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Table/LaborListContainer.js" afterPath="$PROJECT_DIR$/src/containers/Table/LaborListContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Table/RightTablePanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Table/RightTablePanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Table/TaskTableContainer.js" afterPath="$PROJECT_DIR$/src/containers/Table/TaskTableContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Task/NewTaskInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/Task/NewTaskInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Task/RightTaskPanelContainer.js" afterPath="$PROJECT_DIR$/src/containers/Task/RightTaskPanelContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Task/TaskCommentsTabContainer.js" afterPath="$PROJECT_DIR$/src/containers/Task/TaskCommentsTabContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Task/TaskInfoContainer.js" afterPath="$PROJECT_DIR$/src/containers/Task/TaskInfoContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Task/TaskListContainer.js" afterPath="$PROJECT_DIR$/src/containers/Task/TaskListContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Task/TaskTrudTabContainer.js" afterPath="$PROJECT_DIR$/src/containers/Task/TaskTrudTabContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/filesaver.js" afterPath="$PROJECT_DIR$/src/filesaver.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helperFunctions.js" afterPath="$PROJECT_DIR$/src/helperFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/Admin/calendarActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/Admin/calendarActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/Admin/codesActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/Admin/codesActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/Admin/departmentActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/Admin/departmentActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/Admin/financesActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/Admin/financesActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/Admin/usersActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/Admin/usersActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/actionHelper.js" afterPath="$PROJECT_DIR$/src/redux/actions/actionHelper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/errorActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/errorActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/layoutActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/layoutActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/reportsActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/reportsActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/statisticsActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/statisticsActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/tableActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/tableActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/tasksActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/tasksActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/actions/userActions.js" afterPath="$PROJECT_DIR$/src/redux/actions/userActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/helpers.js" afterPath="$PROJECT_DIR$/src/redux/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers.js" afterPath="$PROJECT_DIR$/src/redux/reducers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Admin/Calendar.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Admin/Calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Admin/Codes.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Admin/Codes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Admin/Department.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Admin/Department.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Admin/Finances.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Admin/Finances.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Admin/Users.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Admin/Users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Errors.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Layout.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Report.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Report.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Statistics.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Statistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Table.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/Task.js" afterPath="$PROJECT_DIR$/src/redux/reducers/Task.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/redux/reducers/User.js" afterPath="$PROJECT_DIR$/src/redux/reducers/User.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static" afterPath="$PROJECT_DIR$/static_old" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css" afterPath="$PROJECT_DIR$/static_old/css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js" afterPath="$PROJECT_DIR$/static_old/js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media" afterPath="$PROJECT_DIR$/static_old/media" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/media/thumb.95781b91.png" afterPath="$PROJECT_DIR$/static_old/media/thumb.95781b91.png" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PersonModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modals/PersonModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidationErrorsModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modals/ValidationErrorsModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasswordChangeModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modals/PasswordChangeModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modals/FilterModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2533">
+              <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewTaskInfo.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Tasks/NewTaskInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="82" column="54" lean-forward="false" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReusableComponents.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/formComponents/ReusableComponents.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="82" column="7" lean-forward="false" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/redux-form/es/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTrudModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Modals/AddTrudModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Tasks/Task.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonModalContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/ModalContainers/PersonModalContainer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="e#47#109#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Созд</find>
+      <find>Созда</find>
+      <find>AddTrudModal</find>
+      <find>modal</find>
+      <find>ValidationErrorsModalContainer</find>
+      <find>ConfirmModalContainer</find>
+      <find>conf</find>
+      <find>LaborList</find>
+      <find>Создать</find>
+      <find>DeclineTrudModalContainer</find>
+      <find>labors</find>
+      <find>PasswordChangeModalContainer</find>
+      <find>getUserTasks</find>
+      <find>getTasksForUsers</find>
+      <find>SET_REPORT_TASKS</find>
+      <find>n</find>
+      <find>new</find>
+      <find>newt</find>
+      <find>newta</find>
+      <find>newtask</find>
+      <find>newtaski</find>
+      <find>newtaskin</find>
+      <find>newtaskinf</find>
+      <find>newtaskinfo</find>
+      <find>setReportTasks</find>
+      <find>setExecutors</find>
+      <find>changeFieldValue</find>
+      <find>checkboxValueChange</find>
+      <find>\&lt;span\&gt;\*\/\}\n                                    \{\/\*\{this\.state\.executors\.map\(x \=\&gt; \&lt;span key\=\{x\.value\}\&gt; \{x\.label\}\&lt;\/span\&gt;\)\}\*\/\}\n                                \{\/\*\&lt;\/span\&gt;</find>
+      <find>Исполнители</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/components/Modals/person.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/NewUserInfo.js" />
+        <option value="$PROJECT_DIR$/src/components/Admin/CodesList.js" />
+        <option value="$PROJECT_DIR$/src/containers/Task/NewTaskInfoContainer.js" />
+        <option value="$PROJECT_DIR$/src/containers/ModalContainers/PersonModalContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/Modals/PersonModal.js" />
+        <option value="$PROJECT_DIR$/src/components/Tasks/NewTaskInfo.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1924" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/vasil_000/rfsa/worktrack/www/src/components/Admin/NewUserInfo.js" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Unnamed">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="npm.Unnamed" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\vasil_000\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\vasil_000\rfsa\worktrack\www" />
+          <option name="myCopyRoot" value="C:\Users\vasil_000\rfsa\worktrack\www" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\vasil_000\rfsa\worktrack\www" />
+          <option name="myCopyRoot" value="C:\Users\vasil_000\rfsa\worktrack\www" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed771edf-1f0f-4955-9b7a-6d7f12c7f225" name="Default" comment="" />
+      <created>1491399625178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1491399625178</updated>
+      <workItem from="1491399626513" duration="18368000" />
+      <workItem from="1491479025847" duration="6381000" />
+      <workItem from="1491489005853" duration="6888000" />
+      <workItem from="1491568973485" duration="7114000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="38751000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16224815" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33044422" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Modals/DeclineTrudModal.js</url>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/containers/Task/TaskListContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tasks/taskHelpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tasks/TaskCommentsTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" column="18" lean-forward="false" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/NewDepartmentInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/NewUserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="78" column="53" lean-forward="false" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Admin/NewUserInfoContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Reports/RightReportsPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modals/DeclineTrudModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Containers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="33" column="69" lean-forward="true" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/RightUserPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/StateStructure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Admin/UserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ModalContainers/ConfirmModalContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ModalContainers/AddTrudModalContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ModalContainers/PasswordChangeModalContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Table/TaskTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="138" column="21" lean-forward="true" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Reports/LeftReportsPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="127" column="3" lean-forward="true" selection-start-line="127" selection-start-column="3" selection-end-line="127" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Routes/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="82" column="21" lean-forward="true" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/statisticsActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/errorActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LayoutContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="67" column="31" lean-forward="true" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.460ad970.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="27902" lean-forward="false" selection-start-line="10" selection-start-column="27902" selection-end-line="10" selection-end-column="27902" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Statistics/LeftStatisticsPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="130" column="26" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/subordinateActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/Report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/Task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="143" column="24" lean-forward="true" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/layoutActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Table/RightTablePanelContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Table/LaborListContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Reports/LeftReportsPanelContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/actionHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tasks/TaskInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="94" column="34" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/userActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/Admin/usersActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/reportsActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Admin/UsersContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="54" column="28" lean-forward="false" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#57#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Task/NewTaskInfoContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Tasks/Task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modals/AddTrudModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/ModalContainers/PersonModalContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#47#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/formComponents/ReusableComponents.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="82" column="7" lean-forward="false" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/redux-form/es/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modals/PersonModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modals/ValidationErrorsModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modals/PasswordChangeModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modals/FilterModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2533">
+          <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tasks/NewTaskInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="82" column="54" lean-forward="false" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

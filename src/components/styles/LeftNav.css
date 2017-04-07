@@ -1,0 +1,107 @@
+.left-sidebar-container ul {
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.left-sidebar-container ul .list-element {
+  border: 10px;
+      box-sizing: border-box;
+      flex-direction: column;
+      display: flex!important;
+      justify-content: center!important;
+      font-family: Roboto, sans-serif;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      cursor: pointer;
+      text-decoration: none;
+      margin: 0px;
+      padding: 0px;
+      outline: none;
+      font-size: 16px;
+      font-weight: inherit;
+      transform: translate(0px, 0px);
+      color: rgba(0, 0, 0, 0.870588);
+      line-height: 16px;
+      position: relative;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      background: none;
+}
+
+.left-sidebar-container ul .list-element {
+  margin-left: 0px;
+  width:100%;
+    position: relative;
+    padding: 22px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.left-sidebar-container ul .list-element:hover {
+  background: rgba(0,0,0,0.01);
+}
+
+.left-sidebar-container ul li:hover {
+  background-color: none;
+}
+
+.left-sidebar-container nav {
+      overflow: auto;
+}
+
+.left-sidebar-container ul .list-element {
+  border: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0px;
+    outline: none;
+    font-size: inherit;
+    font-weight: inherit;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    height: 80px;
+    line-height: 36px;
+    min-width: 88px;
+    color: rgba(0, 0, 0, 0.870588);
+    -webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.list-element-0 {
+  margin-left: 0!important;
+};
+
+.list-element-10 {
+  margin-left: 10!important;
+};
+
+.list-element-20 {
+  margin-left: 20!important;
+};
+
+.list-element-30 {
+  margin-left: 30!important;
+};
+
+.list-element-40 {
+  margin-left: 40!important;
+};
+
+.left-sidebar-container ul .list-element>div>div {
+      margin-left: 6px!important;
+      margin-top: 16px;
+}

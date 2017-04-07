@@ -1,0 +1,21 @@
+.leaveCommentContainer {
+   align-items: center;
+   min-height: 150px;
+   background-color: #f8f8f9;
+   border: 1px solid #ddd;
+   align-items: stretch;
+}
+
+.comment-send-area.disabled {
+  background: #EEEEEE;
+  pointer-events: none;
+}
+
+.comment-send-area.disabled textarea {
+  background: #EEEEEE;
+  pointer-events: none;
+}
+
+.comment-send-area button {
+  float:right;
+}

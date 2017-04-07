@@ -1,0 +1,264 @@
+.taskDropdown {
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  background-color: white;
+  height: 36px!important;
+  border-radius: 2px;
+}
+
+.taskDropdown>div:first-child {
+  height: 80%!important
+}
+
+.tasksContainer .ReactVirtualized__Grid  {
+  outline: none!important;
+  overflow-x: hidden!important;
+}
+
+.taskDropdown>div:first-child>div:nth-child(2) {
+  line-height: 36px!important
+}
+
+.pencil-edit {
+  visibility: hidden;
+}
+
+.single-task:hover .pencil-edit{
+  visibility:visible;
+}
+
+.tasksContainer .ReactVirtualized__Grid  {
+  width: 100%!important;
+  outline: none!important;
+}
+
+.single-task.new-task {
+  background-color: rgba(255, 255, 0, 0.39);
+}
+
+.single-task.declined-task {
+  background: rgba(255, 192, 203, 0.71);
+}
+
+.taskDropdown>div:first-child>svg {
+  top:6px!important
+}
+
+.addTrudButtonContainer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.taskStatusTree {
+  float: left;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: white;
+  padding: 4px;
+}
+
+.tasks.closed {
+  display: none;
+}
+
+.clickable-image:hover{
+  cursor: pointer;
+}
+
+.next {
+  width: 20px;
+  height: 20px;
+  transition: all 0.1s ease;
+  margin-right: 10px;
+}
+
+.next.opened {
+  transform: rotate(90deg);
+}
+
+.non-visible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.taskContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.taskLabel {
+    line-height: 51px;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-list-row  {
+  pointer-events: none;
+}
+
+.header-list-row > .taskLabel {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.taskLabel:hover {
+  cursor: pointer;
+}
+
+.single-task .next {
+  margin-top: 8px;
+}
+
+.single-task{
+  height: 34px;
+  margin-top: 10;
+  margin-bottom: 10;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px black solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.single-task > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.single-task.active {
+  background-color: #B3F2F2;
+}
+
+.taskListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    border-bottom: 1px black solid;
+
+}
+
+.tasks {
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.addButton {
+    box-shadow: none!important;
+}
+
+.addButton button {
+    border: 1px solid #02ceff!important;
+    border-radius: 5px;
+}
+
+.addButton span {
+      color:  #02ceff!important;
+}
+
+.taskDropdown > div > div {
+    color:  #02ceff!important;
+}
+
+.taskDropdown {
+  border: 1px solid #02ceff!important;
+  border-radius: 5px;
+  box-shadow: none!important;
+}
+
+.rightPanelContainer {
+  transition: all ease 0.5s;
+  border-radius: 5px;
+}
+
+.rightPanel{
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.task-header {
+  font-weight: bold;
+}
+
+.task-header .taskLabel {
+  pointer-events: none;
+}
+
+.level_1 {
+  margin-left: 20px;
+  width: calc(100% - 20px);
+}
+
+.level_2 {
+  margin-left: 40px;
+  width: calc(100% - 40px);
+}
+
+.level_3 {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}
+
+.level_4 {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+.level_5 {
+  margin-left: 100px;
+  width: calc(100% - 100px);
+}
+
+.level_6 {
+  margin-left: 120px;
+  width: calc(100% - 120px);
+}
+
+.level_7 {
+  margin-left: 140px;
+  width: calc(100% - 140px);
+}
+
+.single-task:hover {
+      background-color: #B3F2F2;
+}
+
+.task-header:hover {
+  background-color: transparent!important;
+}
+
+.level_8 {
+  margin-left: 160px;
+  width: calc(100% - 160px);
+}
+
+.approved-task .taskStatusTree {
+  background-color: #3eb489;
+}
+
+button span {
+  text-transform: none!important;
+}
+
+.task-list-container{
+
+  font-family: serif!important;
+}
+
+.tasksContainer {
+  transition: all ease 0.5s;
+  overflow: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

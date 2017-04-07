@@ -1,0 +1,193 @@
+.report-type-choose-radio {
+  display: flex;
+  font-size: 13px;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.reports-header {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.user-report-select>div {
+  height: 100%;
+}
+
+.user-report-select .Select {
+  min-height: 100px;
+}
+.user-report-select .Select-control {
+  min-height: 100px;
+}
+
+.user-report-select .Select-multi-value-wrapper {
+  height: 100%;
+}
+
+.report-type-choose-radio label {
+  white-space: nowrap;
+}
+
+
+.long-panel .rightPanel > div {
+  overflow-x: auto;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top; max-width: 100px}
+
+.reports-header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.top-statistics-buttons-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.top-statistics-buttons-container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button-statistics-create {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-statistics-create > div > button {
+  border-style: solid!important;
+border-width: 1px!important;
+border-color: #c1c1c1!important;
+}
+
+.reports-header > span {
+  flex: 1;
+}
+
+.reports-header > div {
+position: absolute;
+right: 10px;
+top:6px;
+}
+
+.reportHeaderContainer > div {
+  display: flex;;
+}
+
+.right-float {
+  float: right;
+}
+
+.excel-download-icon{
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+}
+
+.user-report-select .Select-placeholder {
+  height: 100%;
+}
+
+
+.elements-report-select .Select-control {
+  min-height: 100px;
+}
+
+.elements-report-select .Select-multi-value-wrapper {
+  min-height: 100px;
+}
+
+.elements-report-select .Select-placeholder {
+  min-height: 100px;
+}
+
+.reports-page .close-right-panel {
+  display: none;
+}
+
+.reports-page {
+   font-family:serif;
+}
+
+.elements-report-select {
+  margin-top: 7px;
+}
+
+.noEvents {
+  pointer-events: none;
+}
+
+.elements-report-select .report-type-choose-radio  {
+  height:20%;
+}
+
+.no-events-tree {
+  pointer-events: none!important;
+}
+
+.no-events-tree * {
+  pointer-events: none!important;
+}
+
+.elements-report-select>div{
+  height:100%;
+}
+
+.elements-report-select .Select  {
+  min-height: 100px;
+}
+
+.reports-header-right{
+  text-align: center;
+  width:100%;
+}
+
+.weekVisualiser{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.button-report-create button{
+  border-style: solid!important;
+  border-width: 1px!important;
+  border-color: #c1c1c1!important;
+  margin-right: 5px!important;
+}
+
+.report-type-choose-radio>div:nth-child(1) {
+  width:25%!important;
+}
+.report-type-choose-radio>div:nth-child(2) {
+  width:50%!important;
+}
+.report-type-choose-radio>div:nth-child(3) {
+  width:25%!important;
+}
+
+@media all and (max-width:3000px) {
+  .long-panel {
+    max-width: 1185px;
+  }
+
+}
+
+@media all and (max-width: 1450px) {
+  .long-panel {
+    max-width: 600px;
+  }
+}

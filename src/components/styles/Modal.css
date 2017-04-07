@@ -1,0 +1,262 @@
+.large-modal {
+  position: relative;
+  background: #EEEEEE!important;
+    border: 1px solid rgb(204, 204, 204);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    max-width: 1200px;
+    min-width: 600px;
+    max-height: 1200px;
+}
+
+.noEvents {
+  pointer-events: none;
+}
+
+
+.ReactModal__Overlay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-modal {
+  position: relative;
+    border: 1px solid rgb(204, 204, 204);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    max-width: 200px;
+    max-height: 300px;
+
+  background: #EEEEEE!important;
+}
+
+.small-modal  button {
+  border-style: solid!important;
+     border-width: 1px!important;
+     border-color: #c1c1c1!important;
+}
+
+.small-modal button:first-child {
+  background: #00ffff!important;
+}
+
+.small-modal button:nth-child(2) {
+  background: #ea9999!important;
+}
+
+.medium-modal {
+    border: 1px solid rgb(204, 204, 204);
+    position: relative;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    max-width: 500px;
+    min-width: 400px;
+    max-height: 800px;
+
+  background: #EEEEEE!important;
+}
+
+.ReactModal__Content{
+   font-family: serif!important;
+}
+
+.comment-field > div {
+  margin: 10px 0 0 9px;
+}
+
+
+
+input[name="hours"] {
+  text-align: center;
+  border: none; /* <-- This thing here */
+ border:solid 1px #ccc;
+  border-radius: 4px;
+  margin-bottom: 1px;
+  padding: 0;
+  height: 34px;
+  margin-top: 6px;
+}
+
+.ReactModal__Content input[name="hours"] {
+      max-width: 178px;
+}
+
+.confirm-text {
+  padding:10px;
+}
+
+.filter-popover {
+  max-width: 780px;
+  min-width: 650px;
+  min-height: 220px;
+  border: 1px solid rgb(204, 204, 204);
+    background: #EEEEEE!important;
+}
+
+.addTrudButton.apply {
+  background-color: #00ffff!important;
+}
+
+.addTrudButton.reset {
+  background-color: #ea9999!important;
+}
+
+.filter-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.filter-button-container button {
+  min-height: 36px;
+  max-height: 36px;
+  min-width: 120px;
+  max-width: 120px;
+  margin: 0 9px!important;
+}
+
+.filter-modal-container .modal-header {
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: black;
+  width: 100%;
+  display: block;
+}
+
+.filter-modal-container .Select-control {
+  height: 70px;
+}
+
+.modal-header {
+  margin-bottom: 5px;
+}
+
+.filter-modal-container >div>div:nth-child(3) {
+      margin-top: 50px;
+}
+
+.close-filter-panel{
+  width: 15px;
+  height: 15px;
+  position: absolute;;
+  right: 0;
+  margin: 10px;
+}
+
+
+.filter-popover > div {
+  min-width: 770px;
+  min-height: 220px;
+}
+.filter-popover > div >div>div {
+  min-width: 770px;
+  min-height: 220px;
+}
+
+.react-datepicker__tether-element {
+  left: -75px!important;
+}
+
+.filter-popover > div {
+  overflow-y: visible!important;
+}
+
+.subs-choose-radio > div {
+  float: left;
+}
+
+.subs-choose-radio > div:first-child {
+  width:34%!important;
+}
+
+.subs-choose-radio > div:nth-child(2) {
+  width:66%!important;
+}
+
+.filter-modal-container {
+  font-size: 14px;
+}
+
+.close-modal{
+  width: 15px;
+  height: 15px;
+  position: absolute;;
+  right: 0;
+  top:8px;
+  margin: 0 10px;
+}
+
+.filter-modal-all-container{
+  margin: 0 7px;
+}
+
+.addTrud.selectContainer {
+  margin: 5px;
+}
+
+.modalForm {
+  height: 100%;
+}
+
+.taskDate {
+  margin-top: 20px;
+}
+
+.taskDate > div > * {
+  float:left;
+  margin: 0 10px;
+}
+
+.save-task-button > button > div{
+
+
+}
+
+.save-task-button span {
+  vertical-align: bottom!important;
+}
+
+.save-task-button > button {
+  border-style: solid!important;
+ border-width: 1px!important;
+ border-color: #c1c1c1!important;
+ height:30px;
+ float:right!important;
+}
+
+.taskDate > div {
+  height:23px;
+}
+
+.taskDate .react-datepicker__input-container{
+  height:100%;
+}
+
+.taskDate .react-datepicker__input-container .datePicker{
+  max-height:23px;
+}
+
+.rightCalendar {
+  width: 23px;
+  height: 23px;
+  margin:0!important;
+}
+
+.ReactModal__Content textarea:focus {
+  background-color: white!important;
+}
+
+@media all and (max-width: 1250px){
+  .responsive-vertical>div{
+    flex-direction: column!important;
+  }
+}

@@ -1,0 +1,173 @@
+.taskTable {
+  width:100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer {
+  transition: all ease 0.5s;
+  overflow: auto;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.task-table-container{
+  font-family: serif!important;
+}
+
+.current-day {
+  color: red;
+  font-weight: bold;
+}
+
+.table-header svg {
+  margin-left: 2px;
+}
+.table-header>div>span {
+  margin-top: 1px;
+}
+
+.overall-row {
+  pointer-events: none;
+}
+
+.tableCell .singleExecutor {
+  float: right;
+}
+
+
+.has-overwork{
+  background-color: rgba(255, 192, 203, 0.71)!important;
+}
+
+.table-header>div{
+  display: flex;
+  justify-content: center;
+}
+
+.overall-row td{
+    background-color: rgba(200,200,200,0.5);
+}
+
+.taskTable tr{
+    background: white;
+  border: 1px black solid;
+    height: 35px;
+}
+
+.has-unaccepted {
+  background-color: rgba(255, 255, 0, 0.39);
+}
+
+tr.unaccepted-task td{
+  background-color: rgba(255, 255, 0, 0.39);
+}
+
+.taskTable th{
+  border: 1px black solid;
+}
+
+
+.taskTable td{
+  border: 1px black solid;
+  text-align: center;
+}
+
+
+.reports-table th{
+  border: 1px black solid;
+}
+
+
+.reports-table td{
+  border: 1px black solid;
+  text-align: center;
+}
+.reports-table tr{
+    background: white;
+  border: 1px black solid;
+    height: 35px;
+}
+
+.reports-table {
+  width:100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+
+
+.react-datepicker__input-container input{
+  max-width: 80px;
+}
+
+.tableCell {
+  cursor: pointer;
+  position: relative;
+}
+
+.tableCell.active {
+  background-color: rgba(179,242,242,0.6);
+}
+
+.taskTable td:first-child{
+  border: 1px black solid;
+  text-align: left;
+}
+
+.dateContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.clickable-image.left {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.task-table-container .weekVisualiser {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.labor-list-header{
+  border-bottom: 1px black solid;
+}
+
+.tableWeekContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tableCalendar {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.weekVisualiser {
+  line-height: 30px;
+}
+
+.clickable-image.right {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.comments-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  font-size: 16px;
+  padding:0px 2px;
+}

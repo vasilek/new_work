@@ -1,0 +1,89 @@
+.clickable-image.edit {
+  width: 30px;
+  height: 30px;
+}
+
+.clickable-image.delete {
+  width: 30px;
+  height: 30px;
+}
+
+.disabled {
+  pointer-events: none!important;
+}
+
+svg.disabled {
+  fill: #CCCCCC!important;
+  pointer-events: none;
+}
+
+svg.disabled circle{
+  fill: #CCCCCC!important;
+}
+
+svg.disabled path {
+  fill: #CCCCCC!important;
+}
+
+.laborBlock {
+  border: 1px solid black;
+  margin:5px 0;
+  min-height: 60px;
+}
+
+.laborBlock.new-task {
+  background-color: rgba(255, 255, 0, 0.39);
+}
+
+.laborBlock.accepted-task {
+  background: white;
+}
+
+.laborBlock.declined-task {
+  background: pink;
+}
+
+.commentButton{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.clickable-image.openTrud {
+  width: 30px;
+  height: 30px;
+  float:right;
+}
+
+.clickable-image.openTrud.small {
+  width: 20px;
+  height: 20px;
+  float:right;
+}
+
+.timeDateCommentLabel {
+  margin-top: 30px;
+  text-align: center;
+  width: 100%
+}
+
+.commentBlock {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 40px;
+  justify-content: space-between;
+  padding:10px;
+}
+
+.laborBlock .innerLaborBlock {
+  margin: 5px;
+}
+
+.trudCommentsBlock.closed {
+  display: none;
+}
+
+.trudCommentsBlock.opened {
+  display: flex;
+  flex-direction: column;
+}
