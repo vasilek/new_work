@@ -17,13 +17,22 @@ const personList = class person extends React.Component {
     checkboxValueChange(name, id,e) {
         if(this.state.chosenUsers.map(y => y.name).indexOf(name) === -1) {
             this.setState({chosenUsers:this.state.chosenUsers.concat([{name,id}])});
+            // console.log(1);
+            // console.log(this.state.chosenUsers);
         } else {
+            console.log(this.state.chosenUsers);
             const newArr = this.state.chosenUsers.filter(x => x.name !== name);
+            console.log(this.state.chosenUsers);
+            console.log(newArr);
+
             this.setState({chosenUsers: newArr});
+
         }
     }
     closeModal() {
         this.props.setExecutors(this.state.chosenUsers.map(x => ({value: x.id, label: x.name})));
+        console.log(4);
+        console.log(this.state.chosenUsers);
         this.props.closeModal();
     }
     render(){

@@ -17,6 +17,7 @@ import {
 } from "../formComponents/ReusableComponents";
 
 import PersonModalContainer from "../../containers/ModalContainers/PersonModalContainer";
+import DepartmentModalContainer from "../../containers/ModalContainers/DepartmentModalContainer";
 // import Popup from 'react-popup';
 
 
@@ -42,6 +43,11 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
     }
     clickHandler() {
         this.props.getUsers();
+        this.props.loadDepTree();
+        // this.props.loadFlatDepartments();
+
+        // console.log(this.props.departments);
+
         this.setState({isModalOpen: true});
     }
     setExecutors(list) {
@@ -54,6 +60,7 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
     render() {
         const props = this.props;
         const {handleSubmit} = props;
+        // console.log(props.users);
         return (
             <form onSubmit={handleSubmit} style={{display: "flex", flexDirection: "column", height: "100%"}}>
                 <Container vertical={true}>
@@ -62,27 +69,28 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                         <Container style={{justifyContent: "space-between"}}>
                             <div className="infoHeaderBlock fullWidth"
                                  style={{display: 'flex', justifyContent: "flex-begin"}}>
+                                {/*<div>*/}
+                                    {/*/!**!/*/}
+                                    {/*<img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{margin:5}}/>*/}
+                                    {/*<PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}*/}
+                                                          {/*setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>*/}
+                                {/*/!**!/*/}
+                                {/*</div>*/}
                                 <div>
-
-                                    <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{margin:5}}/>
-                                    <PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
-                                                          setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>
-
-                                </div>
-                                <div>
-                                    <img className="user" src={people} alt="logo" style={{margin:5}}/>
+                                    <img className="user" onClick={this.clickHandler.bind(this)} src={people} alt="logo" style={{margin:5}}/>
+                                    <DepartmentModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}/>
                                 </div>
 
-                                <div style={{display: "none"}}>
-                                    <ExecutorsAsyncSelectField executors={props.executors}/>
-                                </div>
+                                {/*<div style={{display: "none"}}>*/}
+                                    {/*<ExecutorsAsyncSelectField executors={props.executors}/>*/}
+                                {/*</div>*/}
                                 <div>
                                     <img className="user" src={calendar} alt="logo" style={{margin:5}}/>
                                     <Field name="startDate" component={DPicker}/>
                                 </div>
-                                <span style={{margin:5}}>
-                                    {this.state.executors.map(x => <span key={x.value}> {x.label}</span>)}
-                                </span>
+                                {/*<span style={{margin:5}}>*/}
+                                    {/*{this.state.executors.map(x => <span key={x.value}> {x.label}</span>)}*/}
+                                {/*</span>*/}
                             </div>
                         </Container>
                     </div>
@@ -123,6 +131,7 @@ let taskForm = reduxForm({
 
 taskForm = connect(
     state => {
+
         let additionalParams = {};
         if (state.taskView.parent_task) {
             additionalParams.code = state.taskView.parent_task.code;

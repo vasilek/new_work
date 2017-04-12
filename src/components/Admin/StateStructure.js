@@ -131,6 +131,7 @@ export default class TaskList extends React.Component {
               <RaisedButton className="addButton" label="Добавить" onClick={this.props.handleAddNewDepartment.bind(this, this.props.activeIndexes.taskId)}/>
             </div>
           </div>
+
           {tasksView}
         </div>
         <div className={`splitter ${(this.props.rightPanelStatus ? "" : "noDisplay")}`}/>
