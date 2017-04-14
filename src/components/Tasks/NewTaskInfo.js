@@ -69,17 +69,17 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                         <Container style={{justifyContent: "space-between"}}>
                             <div className="infoHeaderBlock fullWidth"
                                  style={{display: 'flex', justifyContent: "flex-begin"}}>
-                                {/*<div>*/}
-                                    {/*/!**!/*/}
-                                    {/*<img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{margin:5}}/>*/}
-                                    {/*<PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}*/}
-                                                          {/*setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>*/}
-                                {/*/!**!/*/}
-                                {/*</div>*/}
                                 <div>
-                                    <img className="user" onClick={this.clickHandler.bind(this)} src={people} alt="logo" style={{margin:5}}/>
-                                    <DepartmentModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}/>
+                                    {/**/}
+                                    <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{margin:5}}/>
+                                    <PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
+                                                          setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>
+                                {/**/}
                                 </div>
+                                {/*<div>*/}
+                                    {/*<img className="user" onClick={this.clickHandler.bind(this)} src={people} alt="logo" style={{margin:5}}/>*/}
+                                    {/*<DepartmentModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}/>*/}
+                                {/*</div>*/}
 
                                 {/*<div style={{display: "none"}}>*/}
                                     {/*<ExecutorsAsyncSelectField executors={props.executors}/>*/}
@@ -88,9 +88,11 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                                     <img className="user" src={calendar} alt="logo" style={{margin:5}}/>
                                     <Field name="startDate" component={DPicker}/>
                                 </div>
-                                {/*<span style={{margin:5}}>*/}
+                                {/*<div style={{margin:5, minHeight: "25px", maxHeight: "35px"}}>*/}
+                                {/*<span >*/}
                                     {/*{this.state.executors.map(x => <span key={x.value}> {x.label}</span>)}*/}
                                 {/*</span>*/}
+                                {/*</div>*/}
                             </div>
                         </Container>
                     </div>

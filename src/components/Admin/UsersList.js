@@ -91,8 +91,8 @@ export default class UsersList extends React.Component {
     if(users.length === 0) {
       return <div/>;
     }
-    tasksIdDict= users.treeNormalized.byId;
-    tasksDict = users.treeNormalized.byGlobalId;
+    // tasksIdDict= users.treeNormalized.byId;
+    // tasksDict = users.treeNormalized.byGlobalId;
     deactivateTasks();
     if(this.props.activeIndexes.taskId !== -1) {
       let items_ = findAllTaskInTreeByIds([this.props.activeIndexes.taskId]);

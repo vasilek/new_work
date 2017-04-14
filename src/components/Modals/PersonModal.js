@@ -31,16 +31,44 @@ const personList = class person extends React.Component {
     }
     closeModal() {
         this.props.setExecutors(this.state.chosenUsers.map(x => ({value: x.id, label: x.name})));
-        console.log(4);
-        console.log(this.state.chosenUsers);
+        // console.log(4);
+        // console.log(this.state.chosenUsers);
         this.props.closeModal();
     }
     render(){
+
+        function d(f) {
+
+        }
+
         const props = this.props;
-        const list = (props.users && props.users.tree) ? props.users.tree.map(x => <div
+        // console.log(props.users.tree);
+        var ZZ = [];
+        if (props.departments.treeNormalized){
+            // console.log( props.departments.treeNormalized.byGlobalId)
+            for (var k in props.departments.treeNormalized.byGlobalId){
+                var Z = props.departments.treeNormalized.byGlobalId[k];
+                ZZ.push([Z.id, Z.name, Z.level, Z.children, Z.parent_id]);
+                // console.log(ZZ);
+            }
+
+        }
+        else
+        {
+            console.log(1)
+        }
+
+        if (ZZ.length !== 0){
+            console.log(ZZ);
+        }
+        const list = (props.users.tree) ? props.users.tree.map(x =>
+            <div>{x.department_name}
+            <div
             style={{display: "flex", flexDirection: "row"}} key={x.id}><input onChange={this.checkboxValueChange.bind(this, x.name, x.id)} checked={this.state.chosenUsers.map(y => y.name).indexOf(x.name) !== -1} type="checkbox" name="a"/>
             <div>{x.name}</div>
-        </div>) : <div/>;
+        </div>
+        </div>
+            ) : <div/>;
         return (
             <Modal
                 isOpen={props.isModalOpen}

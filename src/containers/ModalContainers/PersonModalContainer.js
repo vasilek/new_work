@@ -8,6 +8,7 @@ import {
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        departments: state.Admin.departments,
         users: state.Admin.users,
         isModalOpen: ownProps.isModalOpen,
         closeModal: ownProps.closeModal,
