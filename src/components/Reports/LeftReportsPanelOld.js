@@ -11,8 +11,7 @@ import right from "../../Icons/right.svg";
 import left from "../../Icons/left.svg";
 import helpers from "../Table/tableHelpers";
 import {debounce} from "../../helperFunctions";
-import human from "../../Icons/human.svg";
-import PersonModalContainer from "../../containers/ModalContainers/PersonModalContainer";
+
 const datepickerStyles = {
   width: "100%",
   display: "flex",
@@ -68,48 +67,7 @@ export default class Labors extends React.Component {
       user_id: false
     }
   }
-
-    clickHandler() {
-        this.props.loadPeopleTree();
-        this.props.loadDepTree();
-        // this.props.loadFlatDepartments();
-
-        // console.log(this.props.departments);
-
-        this.setState({isModalOpen: true});
-    }
-
-    setExecutors(list) {
-        // console.log("list",list)
-        // this.setState({selectedUsers: list});
-        this.handleSelectChange(list)
-    }
-    closeModal() {
-        this.setState({isModalOpen: false});
-        // console.log("state ",this.state.selectedUsers);
-        // console.log("props ",this.props.executorsFromForm);
-    }
-
-
-
-    componentWillReceiveProps(nextProps){
-        if (nextProps.initialValue !== this.props.initialValue) {
-            this.setState({ chosenUsers: nextProps.initialValue })
-        }
-    }
-
-    add2Obj(first, second){
-        var third = [];
-        var temp = [...new Set(first.concat(second.map(x => ({value: x.id, label: x.name}))).map(x => x.label))];
-        for (var i in temp){
-            third.push({label:temp[i]})
-        }
-        console.log(third);
-        return third;
-    }
-
-
-    createReport(radio) {
+  createReport(radio) {
     if(radio==="tasks") {
       this.props.createTaskReport(this.state);
     } else if(radio ==="finance") {
@@ -238,16 +196,7 @@ export default class Labors extends React.Component {
   }
   return (
     <Container vertical={true}>
-
-      <div
-          style={{display: "flex", flexDirection: "row"}}>
-        <div>
-          <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{margin:15}}/>
-          <PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
-                                setExecutors={(list) => { this.setExecutors(list)}}/>
-        </div >
       <h3 className="reports-header"> Сотрудник{radio !== "table" ? "и" : ""} </h3>
-      </div>
       <div className="user-report-select" flex="2">
         <Select.Async multi={true} value={this.state.selectedUsers}
         onChange={this.handleSelectChange.bind(this)}

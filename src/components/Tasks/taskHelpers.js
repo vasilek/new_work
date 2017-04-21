@@ -61,7 +61,7 @@ helpers.createExecutors = function(executors) {
       executorDivs.push(<div className="singleExecutor non-distributed" key={-1}><span data-tip={"Не распределено"}>Н</span></div>)
   }
   if(smallDivs.length) {
-    executorDivs.push(<div className="singleExecutor" key={-2}><span data-tip={"Исполнители:  " + smallDivs.join(", ")}>...</span></div>)
+    executorDivs.push(<div className="singleExecutor" key={-2}><span data-html data-tip={"<b>Исполнители:  </b><br/>" + smallDivs.join(",<br/> ")}>...</span></div>)
   }
   return executorDivs;
 }

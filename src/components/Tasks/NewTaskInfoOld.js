@@ -6,13 +6,8 @@ import human from "../../Icons/human.svg";
 import people from "../../Icons/people.svg";
 import {Field, reduxForm,change} from 'redux-form'
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
 import DPicker from "../formComponents/DatePicker";
-import { AppRegistry, Text, StyleSheet } from 'react-native';
-import Modal from 'react-modal';
-import {findDOMNode} from 'react-dom'
-import ReactTooltip from 'react-tooltip'
 import {
     WorkCodeField,
     FinancesField,
@@ -43,25 +38,17 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
         super(props);
         this.state = {
             isModalOpen: false,
-            isModalOpen1: false,
             executors: []
         }
     }
     clickHandler() {
         this.props.getUsers();
         this.props.loadDepTree();
-        this.props.loadPeopleTree();
-
         // this.props.loadFlatDepartments();
 
         // console.log(this.props.departments);
 
         this.setState({isModalOpen: true});
-    }
-    clickHandler1() {
-        console.log(this.state.isModalOpen1);
-
-        this.setState({isModalOpen1: true});
     }
     setExecutors(list) {
         this.setState({executors: list});
@@ -70,27 +57,10 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
         this.setState({isModalOpen: false});
     }
 
-    closeModal1() {
-        this.setState({isModalOpen1: false});
-    }
-
-
-    // showAll(x) {
-        // console.log('01234');
-        // return (<PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
-        //                       setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>);
-
-    // }
-    componentDidUpdate() {
-        ReactTooltip.rebuild();
-    }
-
     render() {
-
         const props = this.props;
         const {handleSubmit} = props;
-        // console.log(props);
-        // console.log(this.state.users);
+        // console.log(props.users);
         return (
             <form onSubmit={handleSubmit} style={{display: "flex", flexDirection: "column", height: "100%"}}>
                 <Container vertical={true}>
@@ -100,20 +70,29 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                             <div className="infoHeaderBlock fullWidth"
                                  style={{display: 'flex', justifyContent: "flex-begin"}}>
                                 <div>
-                                {/*<div>*/}
-                                    <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{marginRight:5}}/>
+                                    {/**/}
+                                    <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{margin:5}}/>
                                     <PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
                                                           setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>
-                                </div >
+                                {/**/}
+                                </div>
+                                {/*<div>*/}
+                                    {/*<img className="user" onClick={this.clickHandler.bind(this)} src={people} alt="logo" style={{margin:5}}/>*/}
+                                    {/*<DepartmentModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}/>*/}
+                                {/*</div>*/}
 
-                                <Text data-tip={"<b>Исполнители</b>" + this.state.executors.map(x => '<br/>' + x.label  ) }  data-html data-iscapture="true" numberOfLines={1} style={{width:300}} >
-                                    {this.state.executors.map(x => <Text numberOfLines={1} key={x.value}> {x.label},</Text>)}
-                                </Text>
-
-                                <div style={{marginLeft:60}}>
+                                {/*<div style={{display: "none"}}>*/}
+                                    {/*<ExecutorsAsyncSelectField executors={props.executors}/>*/}
+                                {/*</div>*/}
+                                <div>
                                     <img className="user" src={calendar} alt="logo" style={{margin:5}}/>
                                     <Field name="startDate" component={DPicker}/>
                                 </div>
+                                {/*<div style={{margin:5, minHeight: "25px", maxHeight: "35px"}}>*/}
+                                {/*<span >*/}
+                                    {/*{this.state.executors.map(x => <span key={x.value}> {x.label}</span>)}*/}
+                                {/*</span>*/}
+                                {/*</div>*/}
                             </div>
                         </Container>
                     </div>

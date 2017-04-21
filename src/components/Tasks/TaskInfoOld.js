@@ -3,7 +3,7 @@ import Container from "../Container";
 import "../styles/TaskInfo.css";
 import TaskTrudTabContainer from "../../containers/Task/TaskTrudTabContainer"
 import TaskCommentsTabContainer from "../../containers/Task/TaskCommentsTabContainer";
-import { Field, reduxForm, formValueSelector, change } from 'redux-form';
+import { Field, reduxForm, formValueSelector } from 'redux-form';
 import {connect} from 'react-redux';
 import AddTrudModalContainer from "../../containers/ModalContainers/AddTrudModalContainer";
 import DPicker from "../formComponents/DatePicker";
@@ -15,13 +15,9 @@ import {debounce} from "../../helperFunctions";
 import {WorkCodeField, FinancesField,ExecutorsSelectField,NameField, DescriptionField, Panel,ExecutorsAsyncSelectField} from "../formComponents/ReusableComponents";
 import Icon from "../../Icons/Icon";
 import ReactTooltip from 'react-tooltip';
-import human from "../../Icons/human.svg";
-import PersonModalContainer from "../../containers/ModalContainers/PersonModalContainer";
-import FlatButton from 'material-ui/FlatButton';
-import Modal from 'react-modal';
-import { AppRegistry, Text, StyleSheet } from 'react-native';
 
-var v = 0;
+
+
 
 const ImagePanel = ({chooseTrudTab, chooseCommentTab, openPopover,activePanel}) => (
   <div style={{display: 'flex', justifyContent: "flex-end"}}>
@@ -101,15 +97,11 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
    super(props);
 
    this.state = {
-       isModalOpen: false,
      open: false,
-     executors:this.props.executorsFromForm,
      executorsFieldActive: false
-
     };
     this.handleDebounce = debounce(this.handleEdit, 400);
   }
-
   handleEdit(e) {
     setTimeout(() => {this.refs.sbmt.click()});
   }
@@ -127,58 +119,9 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
       open: false,
     });
   };
-
-    clickHandler() {
-        // this.props.getUsers();
-        this.props.loadPeopleTree();
-        this.props.loadDepTree();
-        // this.props.loadFlatDepartments();
-
-        // console.log(this.props.departments);
-
-        this.setState({isModalOpen: true});
-    }
-    clickHandler1() {
-        console.log(this.state.isModalOpen1);
-
-        this.setState({isModalOpen1: true});
-    }
-    setExecutors(list) {
-        v = 1;
-        this.setState({executors: list});
-    }
-    closeModal() {
-        this.setState({isModalOpen: false});
-        // console.log("state ",this.state.executors);
-        // console.log("props ",this.props.executorsFromForm);
-    }
-
-    closeModal1() {
-        this.setState({isModalOpen1: false});
-        console.log(2);
-    }
-
-    componentWillReceiveProps(nextProps){
-        if (nextProps.initialValue !== this.props.initialValue) {
-            this.setState({ chosenUsers: nextProps.initialValue })
-        }
-    }
-
-    add2Obj(first, second){
-        var third = [];
-        var temp = [...new Set(first.concat(second.map(x => ({value: x.id, label: x.name}))).map(x => x.label))];
-        for (var i in temp){
-            third.push({label:temp[i]})
-        }
-        console.log(third);
-        return third;
-    }
-
-
-
-  //   componentDidUpdate() {
-  //   ReactTooltip.rebuild();
-  // }
+  componentDidUpdate() {
+    ReactTooltip.rebuild();
+  }
   render () {
     const props=this.props;
     const task = props.task;
@@ -187,22 +130,12 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
     const addTrudButton = addTrudButtonF(props);
     const executorNames = helpers.createExecutors(executorsFromForm);
     let executorsField = "";
-
-
-
-    // // this.setState({executors:executorsFromForm});
-    // // console.log('typedsd', executorsFromForm.map(x => x.name));
-    //
     if(this.state.executorsFieldActive) {
       executorsField = <ExecutorsAsyncSelectField executors={props.executors} debouncedUpdate={this.handleEdit.bind(this)}
         deactivateExecutorsField={this.deactivateExecutorsField.bind(this)}/>
     } else {
       executorsField = (<div  className="executorHeader"><span>Исполнители: </span><div className="executorNames" onClick={this.activateExecutorsField.bind(this)}>{executorNames}</div></div>);
-      // console.log(executorsFromForm);
     }
-
-
-
     if(!task.id && (task.id !== 0)) {
       return <div/>;
     } else {
@@ -214,61 +147,7 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
               <Container style={{justifyContent: "space-between"}}>
                 <div ref="executorsSelect" className="infoHeaderBlock" style={{display: 'flex', justifyContent: "flex-begin"}}>
                   {executorsField}
-
-
-                    <div>
-                        <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{marginLeft:5}}/>
-                        <PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
-                                              initialValue={executorsFromForm}
-                                              setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>
-                    </div >
-
-
-                    {v != 0 ?
-                        <Text data-tip={"<b>Исполнители</b>" +this.state.executors.map(x => '<br/>' + x.label) }
-                                                                                      data-html data-iscapture="true" numberOfLines={1} style={{width:300}} >
-                        {this.state.executors.map(x =>
-                            <Text numberOfLines={1}> {x.label},</Text>)}
-                    </Text> :
-                        <Text data-tip={"<b>Исполнители</b>" + executorsFromForm.map(x => '<br/>' + x.name) }
-                              data-html data-iscapture="true" numberOfLines={1} style={{width:400}} >
-                            {executorsFromForm.map(x =>
-                                <Text numberOfLines={1}> {x.name},</Text>)}
-                        </Text>
-
-                    }
-                        {/*<Text data-tip={"<b>Исполнители</b>" +this.state.executors.map(x => '<br/>' + x.label) }*/}
-                          {/*data-html data-iscapture="true" numberOfLines={1} style={{width:400}} >*/}
-
-                        {/*/!*{this.add2Obj(this.state.executors, executorsFromForm).map(x =>*!/*/}
-                            {/*/!*<Text numberOfLines={1}> {x.label},</Text>)}*!/*/}
-                        {/*{this.state.executors.map(x =>*/}
-                            {/*<Text numberOfLines={1}> {x.label},</Text>)}*/}
-                    {/*</Text>*/}
-
-
-                    {/*<FlatButton onClick={this.clickHandler1.bind(this)} label="Список"/>*/}
-                    {/*<Modal*/}
-                        {/*isOpen={this.state.isModalOpen1}*/}
-                        {/*contentLabel="Modal"*/}
-                        {/*// style={{overlay: {zIndex: 10}}}*/}
-                        {/*className="people-modal"*/}
-
-                    {/*>*/}
-                        {/*<h3>Назначенные на задачу</h3>*/}
-                        {/*<ol>*/}
-                            {/*{this.state.executors.map(x =>*/}
-
-                                {/*<li key={x.value}> {x.label}</li>*/}
-
-                            {/*)}*/}
-                        {/*</ol>*/}
-                        {/*<FlatButton style={{float: "right"}} onClick={this.closeModal1.bind(this)}>Закрыть</FlatButton>*/}
-
-                    {/*</Modal>*/}
-
-
-                    <div style={{display:"flex", flexDirection:"row"}}>
+                  <div style={{display:"flex", flexDirection:"row"}}>
                     <Icon className="user" name="calendar" />
                     <Field name="startDate" newOnChange={this.handleEdit.bind(this)} component={DPicker}/>
                   </div>
@@ -331,15 +210,7 @@ taskForm = connect(
     return ({
     initialValues: state.taskView,
     executorsFromForm
-  })},
-function(dispatch) {
-    return {
-        // This will be passed as a property to the presentational component
-        changeFieldValue: function(field, value) {
-            dispatch(change('newTaskInfoDialogForm', field, value))
-        }
-    }
-}
+  })}
 )(taskForm);
 
 export default taskForm;

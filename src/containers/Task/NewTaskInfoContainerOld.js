@@ -3,21 +3,18 @@ import { connect } from 'react-redux';
 import {
     getUsers
 } from "../../redux/actions/Admin/usersActions";
-import {loadPeopleTree} from "../../redux/actions/subordinateActions";
 import {
     loadDepartment,
     setDepartment, loadDepTree, loadFlatDepartments
 } from "../../redux/actions/Admin/departmentActions";
-import Modal from 'react-modal';
+
 const mapStateToProps = (state,ownProps) => {
   return {
       flatDepartments: state.Admin.flatDepartments,
       departments: state.Admin.departments,
     codes: state.codes,
     finances: state.finances,
-    executors: state.User.subordinates,
-      users: state.Admin.users,
-
+    executors: state.User.subordinates
   }
 }
 
@@ -35,11 +32,6 @@ const mapDispatchToProps = (dispatch) => {
       loadFlatDepartments: () =>
       {
           dispatch(loadFlatDepartments());
-      },
-
-      loadPeopleTree: () =>
-      {
-          dispatch(loadPeopleTree());
       }
   }
 }

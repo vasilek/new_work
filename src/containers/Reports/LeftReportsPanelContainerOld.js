@@ -8,8 +8,6 @@ createUserReport,
 deleteTableData
 } from "../../redux/actions/reportsActions";
 import {changeWeek, setCurrentWeek, setCurrentDay, loadTableData} from "../../redux/actions/tableActions";
-import {loadPeopleTree} from "../../redux/actions/subordinateActions";
-import {loadDepTree} from "../../redux/actions/Admin/departmentActions";
 
 
 const mapStateToProps = (state,ownProps) => {
@@ -93,13 +91,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     radioChanged: () => {
       dispatch(deleteTableData());
-    },
-      loadPeopleTree: () => {
-          dispatch(loadPeopleTree());
-      },
-      loadDepTree: () => {
-          dispatch(loadDepTree());
-      }
+    }
   }
 }
 

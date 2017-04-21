@@ -22,14 +22,6 @@ import {
     closeTrudModal,
     toggleRightPanel
 } from "../../redux/actions/layoutActions";
-import {
-    getUsers
-} from "../../redux/actions/Admin/usersActions";
-import {
-    loadDepartment,
-    setDepartment, loadDepTree, loadFlatDepartments
-} from "../../redux/actions/Admin/departmentActions";
-import {loadPeopleTree} from "../../redux/actions/subordinateActions";
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -112,20 +104,7 @@ const mapDispatchToProps = (dispatch) => {
         copyTask: (task) => {
           let json = TaskToSend(task);
           dispatch(createTask(json));
-        },
-        getUsers: function () {
-            dispatch(getUsers());
-        },
-
-        loadDepTree: () =>
-        {
-            dispatch(loadDepTree());
-        },
-        loadPeopleTree: () =>
-        {
-            dispatch(loadPeopleTree());
         }
-
     }
 }
 
