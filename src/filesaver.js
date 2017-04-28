@@ -194,7 +194,7 @@ function sheet_from_array_of_arrays(data, opts) {
             cell.s = {
                 alignment: { wrapText: true, horizontal: "center", vertical: "center"},
                 border:  boldBorder,
-                font: {sz: "9"}
+                font: {sz: "9", name:"Arial"}
             };
             var cell_ref = XLSX.utils.encode_cell({ c: i, r: R });
             ws[cell_ref] = cell;
@@ -227,7 +227,7 @@ function sheet_from_array_of_arrays(data, opts) {
               cell.s = {
                   alignment: { wrapText: true, horizontal: "center", vertical: "center"},
                   border: boldBorder,
-                  font: {sz: "9"}
+                  font: {sz: "9", name:"Arial"}
               };
             }
             ws[cell_ref] = cell;
@@ -249,7 +249,7 @@ function sheet_from_array_of_arrays_table(data, opts) {
     const bottomBorder = {bottom: {style: "thin"}};
     const thickBorder =  {top :{style: "medium"}, bottom: {style: "medium"},left: {style: "medium"}, right: {style: "medium"}};
     const valignment = function(r,c) {
-      if((r > data.length - 13) && (c < 4 ) || (r > data.length - 7)) {
+      if((r > data.length - 13) && (c < 4 ) || (r > data.length - 7) || (r == 21 || r == 22 || r == 26 || r == 27 && c <= 18)) {
         return "bottom";
       }
       return "center";
@@ -257,7 +257,7 @@ function sheet_from_array_of_arrays_table(data, opts) {
     const alignment = function(r,c) {
       if((r == 4 || r == 5 || r == 6) && c < 36) {
         return "left";
-      } else if((r == 4 || r == 5 || r == 6 || r ==2 || r ==3 || r== 7) && c >= 35 && c <=39) {
+      } else if((r == 4 || r == 5 || r == 6 || r ==2 || r ==3 || r== 7) && c >= 33 && c <=39) {
         return "right";
       } else {
         return "center";
@@ -265,38 +265,64 @@ function sheet_from_array_of_arrays_table(data, opts) {
     }
     const fntSize = function(r, c) {
       if(((r == data.length - 12) || (r == data.length - 11)|| (r == data.length - 10)|| (r == data.length - 9)) && (c > 26 && c <45)) {
-        return "16";
+        return ["10", true];
       }
       if(r === data.length -1) {
-        return "14";
+        // return "14";
+        return ["14", true];
       }
+      if (r == 31){
+          return ["8", false];
+      }
+      if (r == 26 || r == 27) {
+            return ["8", false];
+        }
+      if (r == 28) {
+            return ["7", false];
+        }
       if(r > data.length - 13 && c > 36) {
-        return "7";
+        return ["8",false];
       }
-      if((r > data.length - 13 && c > 11 && c < 20)) {
-        return "7";
+      if((r > data.length - 13  && c > 11 && c < 20)) {
+        return ["7",false];
       }
       if((r > data.length - 13) && (c < 4)) {
-        return "11";
+        return ["8",false];
       }
-      if((r > data.length - 13)) {
-        return "11";
+      if((r > data.length - 13 && r < 30) && (c >= 4)) {
+        return ["7",false];
       }
-      if(r==0 || r ==1) {
-        return "14";
+      if(r==0 || r ==1 && c <=36) {
+        // return "14";
+        //  Заголовок
+        return ["11", true];
       }
-      if(r==7 && c >= 35 && c <=39) {
-          return "11";
+        if(r==0 || r ==1 && c >36) {
+
+            return ["9", false];
+        }
+
+        if (r == 23 && c >3 && c <= 18 ){
+          return ["7", false];
+        }
+
+      if(r==7 && c >= 25 && c <=33) {
+          return ["7",false];
       }
+        if(r==7 && c > 33) {
+            return ["8",false];
+        }
+
       if(r < 7) {
-        return "11";
+        return ["8",false];
       } else {
-        return "9";
+        //  Цифры внутри
+        return ["7",false];
       }
     }
     const re = 8;
     function borderVal(R,C) {
-      if(((R=== 4) || (R===5) || (R===6)) && (C >= 7 && C <= 34)) {
+      if(((R=== 4) || (R===5) || (R===6)) && (C >= 7 && C <= 33)) {
         return {bottom: {style: "thin"}};
       }
       if((R === data.length - 10) && ((C >=5 && C<9) || (C >=10 && C<14) || (C >=15 && C<19))) {
@@ -355,10 +381,11 @@ function sheet_from_array_of_arrays_table(data, opts) {
       if(data[R].length === 0) {
         for(let i = 0; i < maxLength; i++) {
             var cell = { v: "", t: "s"};
+            // console.log()
             cell.s = {
                 alignment: { wrapText: true, horizontal: alignment(R,i) , vertical: valignment(R,i)},
                 border:  borderVal(R,i),
-                font: {sz: fntSize(R, i)}
+                font: {sz: fntSize(R, i)[0]}
             };
             var cell_ref = XLSX.utils.encode_cell({ c: i, r: R });
             ws[cell_ref] = cell;
@@ -388,10 +415,11 @@ function sheet_from_array_of_arrays_table(data, opts) {
             }
             else cell.t = 's';
             if(!cell.s) {
+
               cell.s = {
                   alignment: { wrapText: true, horizontal:  alignment(R,C), vertical: valignment(R,C)},
                   border: borderVal(R,C),
-                  font: {sz: fntSize(R, C)}
+                  font: {sz: fntSize(R, C)[0], bold: fntSize(R,C)[1], name:"Arial"}
               };
             }
             ws[cell_ref] = cell;
@@ -572,7 +600,6 @@ export function htmlToExcel(tableSelector) {
   /* original data */
   var data = oo[0];
   var ws_name = "SheetJS";
-  console.log(data);
   var wb = new Workbook(), ws = sheet_from_array_of_arrays_table(data);
 
   /* add ranges to worksheet */

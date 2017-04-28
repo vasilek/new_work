@@ -63,6 +63,7 @@ export default class TaskList extends React.Component {
     }
   }
   render() {
+      console.log(this.props);
     let departments = this.props.departments;
     const props = this.props;
     if(departments.length === 0) {

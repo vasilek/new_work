@@ -80,10 +80,12 @@ export function getSubordinates() {
 export function getCurrentUser() {
     const handler = function (json, dispatch) {
         const data = json.data.user;
+        // console.log("123")
         const user = {
             name: data.name,
             position: data.position,
-            id: data.id
+            id: data.id,
+            department: data.department_id
         };
         dispatch(setLoggedUser({
             user

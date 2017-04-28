@@ -11,7 +11,8 @@ import {rowHeight} from "../../helperFunctions";
 const buttonContainerStyles = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between"
+  justifyContent: "space-between",
+  marginLeft: "5px"
 }
 
 const fullSize = {
@@ -91,6 +92,10 @@ export default class UsersList extends React.Component {
     if(users.length === 0) {
       return <div/>;
     }
+
+
+
+    const widthOfEl = 100/6 + "%";
     // tasksIdDict= users.treeNormalized.byId;
     // tasksDict = users.treeNormalized.byGlobalId;
     deactivateTasks();
@@ -107,16 +112,17 @@ export default class UsersList extends React.Component {
       return (
         <div className={"single-task " +
           ` ${item.isHeader ? " header-list-row " : ""} ` + (item.active ? " active" : "") + " "} key={item.globalIndex} onClick={props.loadUser.bind(this,item)}>
-          <span className="taskLabel">{item.number}</span>
-          <span className="taskLabel">{item.name}</span>
-          <span className="taskLabel">{item.login}</span>
-          <span className="taskLabel">{item.department_name}</span>
-          <span className="taskLabel">{item.position}</span>
-          <span className="taskLabel">{roleDict[item.role]}</span>
+          <span className="taskLabel1">{item.number}</span>
+          <span className="taskLabel2">{item.name}</span>
+          <span className="taskLabel3" style={{textAlign:"center"}}><b>{item.login}</b></span>
+          <span className="taskLabel4">{item.department_name}</span>
+          <span className="taskLabel5">{item.position}</span>
+          <span className="taskLabel6">{roleDict[item.role]}</span>
         </div>
       )
     }
-    const treeWithHeaders = [headers].concat(users.tree);
+    // const treeWithHeaders = [headers].concat(users.tree);
+    const treeWithHeaders = users.tree;
     const treeNormalized = users.treeNormalized;
     let newUsers = {
       tree: treeWithHeaders,
@@ -148,6 +154,7 @@ export default class UsersList extends React.Component {
     rowHeight={rowHeight}
     rowCount={taskContainers.length}
     rowRenderer={rowRenderer}
+     style={{overflowY:"scroll", marginLeft: "5px", height:"80%"}}
     />
     )
     return (
@@ -157,7 +164,27 @@ export default class UsersList extends React.Component {
             <div>
               <RaisedButton className="addButton" label="Добавить" onClick={this.props.handleAddNewUser}/>
             </div>
+
           </div>
+
+
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                overflowY:"scroll",
+                marginTop: "20px",
+                marginBottom: "10px",
+                marginLeft: "5px",
+                width: "100%"
+            }}>
+                <div className="taskLabel1"><u><b>Табельный номер</b></u></div>
+                <div className="taskLabel2"><u><b>ФИО</b></u></div>
+                <div className="taskLabel3"><u><b>Логин в Active Directory</b></u></div>
+                <div className="taskLabel4"><u><b>Отделение ШС</b></u></div>
+                <div className="taskLabel5"><u><b>Должность</b></u></div>
+                <div className="taskLabel6"><u><b>Роль</b></u></div>
+            </div>
+
           {tasksView}
           <PagesPicker prevPage={props.prevPage.bind(this, props.pageNumber)} nextPage={props.nextPage.bind(this, props.pageNumber)} pageNumber={props.pageNumber}/>
         </div>

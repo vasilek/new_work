@@ -7,11 +7,40 @@ import thelpers from "../Table/tableHelpers";
 import {getDateMonthRange} from "../../redux/actions/tableActions";
 
 
+
+
 export default class RightTaskPanel extends React.Component {
+    componentDidMount() {
+        this.props.loadDepTree();
+        // if (this.props.departments.treeNormalized && this.props.Y.user){
+
+        // const Z = this.props.loadDepartment(this.props.departments.treeNormalized.byId[this.props.Y.user.department]);
+        // const Z = this.props.departments.treeNormalized.byId[this.props.Y.user.department];
+        //     if (Z){
+        //
+        // console.log("Z");
+        // console.log(Z);
+        // console.log("Z");
+        //     }
+        // }
+    }
+
+
   render() {
     const props = this.props;
+    // props.loadDepTree();
+
+    // console.log(")))))))))))");
+    // if (props.departments.treeNormalized){
+    // console.log();
+    // console.log(props.Y);
+      console.log(props.departments);
+    // }
+    // console.log("(((((((((((");
     const currentWeek = props.currentWeek;
     let reportsTable = props.reportsTable;
+    var userName = props.name;
+    const userPosition = props.position;
     if(!reportsTable.users && reportsTable[0] !== "none") {
         const range = thelpers.getDateRange(props.currentWeek);
         const dateRangeWords = "c " + moment(range.first).format("DD MMMM") + " по " + moment(range.last).format("DD MMMM");
@@ -34,7 +63,8 @@ export default class RightTaskPanel extends React.Component {
       if(props.reportsTable.users && props.reportsTable.users[0].days.length) {
         let range = getDateMonthRange(currentWeek);
         const dateRangeWords = "c " + moment(range.first).format("DD") + " по " + moment(range.last).format("DD MMMM") + " " +  moment(range.last).format("YYYY") + "г";
-        let table = thelpers.generateUserReportTable(props.reportsTable.users, dateRangeWords);
+        // let table = thelpers.generateUserReportTable(props.reportsTable.users, dateRangeWords);
+        let table = thelpers.generateUserReportTable(props.reportsTable.users, dateRangeWords, userName, userPosition);
         return (
           <Container vertical={true}>
             <div flex="1" className="reportHeaderContainer">

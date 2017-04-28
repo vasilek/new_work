@@ -15,8 +15,11 @@ import LaborInfoContainer from "../../containers/LaborInfoContainer";
 import ConfirmModalContainer from "../../containers/ModalContainers/ConfirmModalContainer";
 import RightTablePanelContainer from "../../containers/Table/RightTablePanelContainer";
 import ReactTooltip from 'react-tooltip';
+// import ReactDataGrid  from "react-data-grid"
+// import { StickyContainer, Sticky } from 'react-sticky';
 
 var CustomInput = React.createClass({
+
   render () {
     return (
       <div  onClick={this.props.onClick} className="tableWeekContainer">
@@ -34,6 +37,15 @@ const datepickerStyles = {
   flexDirection: "row",
   justifyContent: "space-between",
   background: "white"
+}
+
+const datepickerStyles_2 = {
+    width: "100%",
+    display: "none",
+    float: "right",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    background: "white"
 }
 
 const fullSize = {
@@ -56,8 +68,9 @@ const datePicker = (props, range)=> (
 )
 
 function createTable (tableData, props) {
+
   let config = {};
-  let tdWidth = 1;
+  let tdWidth = 10;
   if(!tableData.headers) return <div className="noDisplay"/>;
   config.renderRow = (td,name, elem) => {
     const executors = taskHelpers.createExecutors(elem.executors);
@@ -100,31 +113,40 @@ function createTable (tableData, props) {
   }
   let finalRow = (
     <tr key={1234567} className="overall-row">
-      <td width="30%" className="tableCell"> Итого </td>
+      <td width="30%"  className="tableCell"> Итого </td>
       {finalcells}
     </tr>
   )
+
+
+
+
+
+
   return (
-    <Container className="task-table-container">
+    <Container className="task-table-container" height={this.props.top ? "80px": "90%"}>
       <div className="tableContainer">
-        {datePicker(props,range)}
+        {this.props.top ? datePicker(props,range) : <div style={{display:"none"}}></div>}
         <div className="taskTable">
-          <table className="taskTable" cellSpacing="0">
-            <thead>
+          <table className="taskTable" cellSpacing="0" >
+            {this.props.top ? <thead>
               <tr>
                 {headers}
               </tr>
-            </thead>
-            <tbody>
+            </thead>: <div style={{display:"none"}}></div>}
+            {this.props.bottom ? <tbody>
               {rows}
               {finalRow}
-            </tbody>
+            </tbody> : <div style={{display:"none"}}></div>}
           </table>
           <AddTrudModal isModalOpen={props.isTrudModalOpen} closeModal={props.closeModal.bind(this)} onSubmit={props.handleTrudSubmit} containerStyle={{maxHeight: '0'}}/>
         </div>
       </div>
       <div className={`splitter ${(props.rightPanelStatus ? "" : "noDisplay")}`}/>
-     <RightTablePanelContainer containerStyle={rightPanelContainerStyle} className={rightPanelClass}/>
+        { this.props.top ?
+          <RightTablePanelContainer containerStyle={rightPanelContainerStyle} className={rightPanelClass} top/> :
+            <RightTablePanelContainer containerStyle={rightPanelContainerStyle} className={rightPanelClass} bottom/>
+        }
      <ConfirmModalContainer containerStyle={{maxWidth: '0'}} isModalOpen={this.state.isModalOpen} message={message} answer={this.acceptAnswer.bind(this)}/>
     </Container>
   )
@@ -162,6 +184,7 @@ export default class Table extends React.Component {
   }
   render() {
     const props = this.props;
+
     const searchQuery = props.searchQuery;
     if(this.props.tableData.data) {
       for(let e in this.props.tableData.data) {

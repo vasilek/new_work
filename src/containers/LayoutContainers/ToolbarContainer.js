@@ -5,7 +5,8 @@ import {toggleToolbar} from "../../redux/actions/layoutActions";
 const mapStateToProps = (state) => {
   return {
     name: state.User.user.name,
-    position: state.User.user.position
+    position: state.User.user.position,
+      department: state.User.user.department
   }
 }
 

@@ -29,6 +29,9 @@ export function setDepartmentTree(state = [], action) {
 export function setDepartment(state = false, action) {
   switch (action.type) {
     case SET_DEPARTMENT:
+        console.log("action.department");
+        console.log(action.department);
+        console.log("action.department");
       return action.department;
     case CLEAR_LAYOUT:
       return false;

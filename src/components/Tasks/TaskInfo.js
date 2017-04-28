@@ -138,11 +138,6 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
 
         this.setState({isModalOpen: true});
     }
-    clickHandler1() {
-        console.log(this.state.isModalOpen1);
-
-        this.setState({isModalOpen1: true});
-    }
     setExecutors(list) {
         v = 1;
         this.setState({executors: list});
@@ -187,19 +182,20 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
     const addTrudButton = addTrudButtonF(props);
     const executorNames = helpers.createExecutors(executorsFromForm);
     let executorsField = "";
+    console.log(123);
 
 
 
     // // this.setState({executors:executorsFromForm});
     // // console.log('typedsd', executorsFromForm.map(x => x.name));
     //
-    if(this.state.executorsFieldActive) {
-      executorsField = <ExecutorsAsyncSelectField executors={props.executors} debouncedUpdate={this.handleEdit.bind(this)}
-        deactivateExecutorsField={this.deactivateExecutorsField.bind(this)}/>
-    } else {
-      executorsField = (<div  className="executorHeader"><span>Исполнители: </span><div className="executorNames" onClick={this.activateExecutorsField.bind(this)}>{executorNames}</div></div>);
-      // console.log(executorsFromForm);
-    }
+    // if(this.state.executorsFieldActive) {
+    //   executorsField = <ExecutorsAsyncSelectField executors={this.state.executors} debouncedUpdate={this.handleEdit.bind(this)}
+    //     deactivateExecutorsField={this.deactivateExecutorsField.bind(this)}/>
+    // } else {
+    //   executorsField = (<div  className="executorHeader"><span>Исполнители: </span><div className="executorNames" onClick={this.activateExecutorsField.bind(this)}>{executorNames}</div></div>);
+    //   // console.log(executorsFromForm);
+    // }
 
 
 
@@ -207,6 +203,8 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
       return <div/>;
     } else {
       return (
+        <div>
+            {this.props.top ? <div style={{display:"none"}}></div> :
         <form onSubmit={handleSubmit} className={task.rights.update ? "" : "no-update"} style={{display:"flex", flexDirection:"column", height: "100%"}}>
           {popover}
           <Container className="global-task-container" vertical={true}>
@@ -237,37 +235,7 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
                         </Text>
 
                     }
-                        {/*<Text data-tip={"<b>Исполнители</b>" +this.state.executors.map(x => '<br/>' + x.label) }*/}
-                          {/*data-html data-iscapture="true" numberOfLines={1} style={{width:400}} >*/}
-
-                        {/*/!*{this.add2Obj(this.state.executors, executorsFromForm).map(x =>*!/*/}
-                            {/*/!*<Text numberOfLines={1}> {x.label},</Text>)}*!/*/}
-                        {/*{this.state.executors.map(x =>*/}
-                            {/*<Text numberOfLines={1}> {x.label},</Text>)}*/}
-                    {/*</Text>*/}
-
-
-                    {/*<FlatButton onClick={this.clickHandler1.bind(this)} label="Список"/>*/}
-                    {/*<Modal*/}
-                        {/*isOpen={this.state.isModalOpen1}*/}
-                        {/*contentLabel="Modal"*/}
-                        {/*// style={{overlay: {zIndex: 10}}}*/}
-                        {/*className="people-modal"*/}
-
-                    {/*>*/}
-                        {/*<h3>Назначенные на задачу</h3>*/}
-                        {/*<ol>*/}
-                            {/*{this.state.executors.map(x =>*/}
-
-                                {/*<li key={x.value}> {x.label}</li>*/}
-
-                            {/*)}*/}
-                        {/*</ol>*/}
-                        {/*<FlatButton style={{float: "right"}} onClick={this.closeModal1.bind(this)}>Закрыть</FlatButton>*/}
-
-                    {/*</Modal>*/}
-
-
+                    <div style={{display:"none"}}>{v=0}</div>
                     <div style={{display:"flex", flexDirection:"row"}}>
                     <Icon className="user" name="calendar" />
                     <Field name="startDate" newOnChange={this.handleEdit.bind(this)} component={DPicker}/>
@@ -310,6 +278,9 @@ const  TaskInfoComponent =  class newTaskInfo extends React.Component {
           </Container>
           <input type="submit"  ref="sbmt" style={{display:"none"}}/>
         </form>
+            }
+        </div>
+
         )
       }
     }

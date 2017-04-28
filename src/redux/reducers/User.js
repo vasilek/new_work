@@ -35,14 +35,17 @@ export function setUserType(state = 0, action) {
 export function userSet(state = {
     name: 'None',
     position: 'Никто',
-    id: -1
+    id: -1,
+    department: ''
 }, action) {
+
     switch (action.type) {
     case SET_USER:
         return {
             name: action.user.name,
             position: action.user.position,
-            id: action.user.id
+            id: action.user.id,
+            department: action.user.department
         };
     default:
         return state;

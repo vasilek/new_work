@@ -94,11 +94,105 @@
 
 .taskLabel {
     line-height: 51px;
-    flex: 1;
+    flex: 1.7;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.taskLabel1 {
+  line-height: 51px;
+  flex: 0.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskLabel2 {
+  line-height: 51px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskLabel3 {
+  line-height: 51px;
+  flex: 0.8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskLabel4 {
+  line-height: 51px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskLabel5 {
+  line-height: 51px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.taskLabel6 {
+  line-height: 51px;
+  flex: 0.7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.codeLabel1 {
+  line-height: 51px;
+  flex: 0.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.codeLabel2 {
+  line-height: 51px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.codeLabel3 {
+  line-height: 51px;
+  flex: 0.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.finLabel1 {
+  line-height: 51px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.finLabel2 {
+  line-height: 51px;
+  flex: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
 
 .header-list-row  {
   pointer-events: none;
@@ -256,7 +350,7 @@ button span {
 
 .tasksContainer {
   transition: all ease 0.5s;
-  overflow: auto;
+  overflow: hidden;
   background-color: white;
   border-radius: 5px;
   padding: 5px;

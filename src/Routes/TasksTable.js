@@ -6,7 +6,7 @@ import Container from "../components/Container";
 
 const containerTaskListContainerStyles = {
     flex:"10",
-    overflow: "auto"
+    overflow: "hidden"
 }
 
 const TaskListContainerStyles = {
@@ -18,7 +18,8 @@ const TasksTable = () => {
     return (
       <Container vertical={true} style={{height:"100%"}} >
         <div containerStyle={containerTaskListContainerStyles} style={TaskListContainerStyles}>
-          <TaskTableContainer  />
+          <TaskTableContainer  top/>
+          <TaskTableContainer  bottom/>
         </div>
       </Container>
     )

@@ -12,7 +12,8 @@ import ReactTooltip from 'react-tooltip';
 const buttonContainerStyles = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between"
+  justifyContent: "space-between",
+  marginLeft: "5px"
 }
 
 const fullSize = {
@@ -176,15 +177,16 @@ export default class FinancesList extends React.Component {
       return (
         <div onClick={beingEdited ? () => {} : props.activateFinance.bind(this,item)}  className={"single-task " +
           ` ${item.isHeader ? " header-list-row " : ""} ` + (item.active ? " active" : "") + " "}  key={item.globalIndex}>
-          {beingEdited  ? <input name="label" value={self.state.label} onChange={self.changeState.bind(self)}/> : <span className="taskLabel">{item.label}</span>}
-          {beingEdited ? <input name="description" value={self.state.description} onChange={self.changeState.bind(self)}/> : <span className="taskLabel">{item.description}</span>}
+          {beingEdited  ? <input name="label" value={self.state.label} onChange={self.changeState.bind(self)}/> : <span className="finLabel1">{item.label}</span>}
+          {beingEdited ? <input name="description" value={self.state.description} onChange={self.changeState.bind(self)}/> : <span className="finLabel2">{item.description}</span>}
           {beingEdited  ?
             <div data-tip="Сохранить"><Icon name="acceptTrud" className={`clickable-image clock ${item.isHeader ? "non-visible" : ""}`} onClick={self.commitChanges.bind(self, item)}/></div>
             : <div data-tip="Редактировать" className="pencil-edit"><Icon name="edit" className={`clickable-image clock ${item.isHeader ? "non-visible" : ""}`} onClick={self.activateCodeEditing.bind(self, item)}/></div>}
         </div>
       )
     }
-    const treeWithHeaders =  [headers].concat(finances.tree);
+    // const treeWithHeaders =  [headers].concat(finances.tree);
+    const treeWithHeaders =  finances.tree;
     const treeNormalized = finances.treeNormalized;
     let newFinances = {
       tree: treeWithHeaders,
@@ -216,6 +218,7 @@ export default class FinancesList extends React.Component {
     rowHeight={rowHeight}
     rowCount={taskContainers.length}
     rowRenderer={rowRenderer}
+     style={{overflowY:"scroll", marginLeft: "5px", height:"80%"}}
     />
     )
     return (
@@ -228,6 +231,24 @@ export default class FinancesList extends React.Component {
             <div className={!~this.props.activeIndexes.taskId ? "noDisplay" : ""}>
               <RaisedButton className="addButton" label="Удалить" onClick={this.startQuestion.bind(this)}/>
             </div>
+          </div>
+          <div style={{
+              overflowY:"scroll",
+              marginTop: "20px",
+              marginBottom: "10px",
+              marginLeft: "5px",
+              width:"100%"
+
+          }}>
+            <div style={{
+                display: "flex",
+
+                flexDirection: "row",
+                width: "calc(100% - 40px)"
+            }}>
+            <div className="finLabel1"><u><b>{headers.label}</b></u></div>
+            <div className="finLabel2"><u><b>{headers.description}</b></u></div>
+          </div>
           </div>
           {tasksView}
           <PagesPicker prevPage={props.prevPage.bind(this, props.pageNumber)} nextPage={props.nextPage.bind(this, props.pageNumber)} pageNumber={props.pageNumber}/>

@@ -12,7 +12,8 @@ import ReactTooltip from 'react-tooltip';
 const buttonContainerStyles = {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    marginLeft: "5px"
 }
 
 const fullSize = {
@@ -197,13 +198,13 @@ export default class CodesList extends React.Component {
                      key={item.globalIndex}>
                     { beingEdited ?
                         <input name="label" value={self.state.label} onChange={self.changeState.bind(self)}/> :
-                        <span className="taskLabel">{item.label}</span>}
+                        <span className="codeLabel1">{item.label}</span>}
                     {beingEdited ? <input name="description" value={self.state.description}
                                           onChange={self.changeState.bind(self)}/> :
-                        <span className="taskLabel">{item.description}</span>}
+                        <span className="codeLabel2">{item.description}</span>}
                     {beingEdited ? <input name="week_limit" value={self.state.week_limit}
                                           onChange={self.changeState.bind(self)}/> :
-                        <span className="taskLabel">{item.week_limit}</span>}
+                        <span className="codeLabel3">{item.week_limit}</span>}
                     {beingEdited ?
                         <div data-tip="Сохранить"><Icon name="acceptTrud"
                                                         className={`clickable-image clock ${item.isHeader ? "non-visible" : ""}`}
@@ -215,8 +216,10 @@ export default class CodesList extends React.Component {
                 </div>
             )
         }
-        const treeWithHeaders = [headers].concat(codes.tree);
+        // const treeWithHeaders = [headers].concat(codes.tree);
+        const treeWithHeaders = codes.tree;
         const treeNormalized = codes.treeNormalized;
+        const widthOfEl = 100/3 + "%";
         let newCodes = {
             tree: treeWithHeaders,
             treeNormalized: treeNormalized
@@ -247,6 +250,7 @@ export default class CodesList extends React.Component {
                 rowHeight={rowHeight}
                 rowCount={taskContainers.length}
                 rowRenderer={rowRenderer}
+                style={{overflowY:"scroll", marginLeft: "5px", height:"80%"}}
             />
         )
         return (
@@ -261,6 +265,27 @@ export default class CodesList extends React.Component {
                                           onClick={this.startQuestion.bind(this)}/>
                         </div>
                     </div>
+
+                    <div style={{
+                        overflowY:"scroll",
+                        marginTop: "20px",
+                        marginBottom: "10px",
+                        marginLeft: "5px",
+                        width:"100%"
+
+                    }}>
+                    <div style={{
+                        display: "flex",
+
+                        flexDirection: "row",
+                        width: "calc(100% - 40px)"
+                    }}>
+                        <span className="codeLabel1"><u><b>{headers.label}</b></u></span>
+                        <span className="codeLabel2"><u><b>{headers.description}</b></u></span>
+                        <span className="codeLabel3"><u><b>{headers.week_limit}</b></u></span>
+                    </div>
+                    </div>
+
                     {tasksView}
                     <PagesPicker prevPage={props.prevPage.bind(this, props.pageNumber)}
                                  nextPage={props.nextPage.bind(this, props.pageNumber)} pageNumber={props.pageNumber}/>

@@ -65,6 +65,7 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
     }
     setExecutors(list) {
         this.setState({executors: list});
+
     }
     closeModal() {
         this.setState({isModalOpen: false});
@@ -73,6 +74,7 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
     closeModal1() {
         this.setState({isModalOpen1: false});
     }
+
 
 
     // showAll(x) {

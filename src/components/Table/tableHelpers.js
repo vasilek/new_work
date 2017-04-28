@@ -7,13 +7,13 @@ import moment from "moment";
 
 
 helpers.generateHeaders = function (headers = [], datedLabors, onAccept) {
-  let th = [<th key="0">Название</th>];
+  let th = [<th key="0" className="table-header" width="30%">Название</th>];
   for(var i = 1; i <= headers.length; i++) {
     const newLabors = datedLabors[headers[i-1]] ? datedLabors[headers[i-1]].filter(x=> x.rawstatus===0) : [];
     const canAcceptAll = (newLabors.length > 0) && newLabors.every(x => x.rights.accept);
     const currentDay = moment().format("DD.MM");
     th[i] = (
-      <th key={i} className="table-header">
+      <th key={i} className="table-header" width="10%">
         <div>
           <span className={currentDay == headers[i-1] ? "current-day" : ""}>{headers[i-1]}</span>
           <div data-tip={"Подтвердить все трудозатраты за " + headers[i-1]}>
@@ -171,7 +171,10 @@ function generateTds(number) {
   return ths;
 }
 
-helpers.generateUserReportTable = function(users, dateWords) {
+helpers.generateUserReportTable = function(users, dateWords, name, position) {
+  let nameL = name.split(" ");
+  const nameA = nameL[0] + " " + nameL[1][0] + ". " + nameL[2][0] + ".";
+  console.log(nameA);
   let rows = [];
   const daysNumber = 31;
   const totalTableWidth = daysNumber+3 + 9;
@@ -194,10 +197,12 @@ helpers.generateUserReportTable = function(users, dateWords) {
       </th>
     </tr>),
     <tr key="a1" className="noDisplay">
-      {generateThs(totalTableWidth - 5)}
+      {generateThs(totalTableWidth - 6)}
       <th colSpan={4} key="header-td-5">
         Форма по ОКУД
       </th>
+        {generateThs(1)}
+
       <th colSpan={4} key="header-td-6">
 
       </th>
@@ -207,10 +212,11 @@ helpers.generateUserReportTable = function(users, dateWords) {
       <th colSpan={12} key="header-td">
         {"за период " + dateWords}
       </th>
-      {generateThs(totalTableWidth - 20 - 10)}
+      {generateThs(totalTableWidth - 20 - 11)}
       <th colSpan={3} key="header-td-7">
         Дата
       </th>
+        {generateThs(1)}
       <th colSpan={4} key="header-td-8">
 
       </th>
@@ -223,10 +229,11 @@ helpers.generateUserReportTable = function(users, dateWords) {
       <th colSpan={25}>
         ФГБУ "НИИ ЦПК имени Ю.А. Гагарина"
       </th>
-      {generateThs(totalTableWidth - 25 - 3 - 4 - 5)}
+      {generateThs(totalTableWidth - 25 - 3 - 4 - 6)}
       <th colSpan={4} key="header-td-7">
         по ОКПО
       </th>
+        {generateThs(1)}
       <th colSpan={4} key="header-td-8">
 
       </th>
@@ -251,10 +258,11 @@ helpers.generateUserReportTable = function(users, dateWords) {
       <th colSpan={25}>
 
       </th>
-      {generateThs(totalTableWidth - 25 - 3 - 4 - 6)}
+      {generateThs(totalTableWidth - 25 - 3 - 4 - 7)}
       <th colSpan={5} key="header-td-7">
         Номер корректировки
       </th>
+        {generateThs(1)}
       <th colSpan={4} key="header-td-8">
 
       </th>
@@ -264,13 +272,15 @@ helpers.generateUserReportTable = function(users, dateWords) {
       <th  colSpan={12}>
         (первичный - 0; корректирующий - 1, 2 и т.д.)
       </th>
-      {generateThs(totalTableWidth - 12 - 14 - 8)}
+      {generateThs(totalTableWidth - 12 - 14 - 9)}
       <th colSpan={7} key="header-td-7">
         Дата формирования документа
       </th>
+        {generateThs(1)}
       <th colSpan={4} key="header-td-8">
         {moment().format("DD/MM/YYYY")}
       </th>
+        {/*{generateThs(totalTableWidth - 12 - 14 - 9)}*/}
     </tr>,
     <tr key="a10" className="noDisplay">
     </tr>
@@ -513,7 +523,7 @@ helpers.generateUserReportTable = function(users, dateWords) {
       </td>
       <td/>
       <td key="executor2" rowSpan="2" colSpan="4">
-
+          {position}
       </td>
       <td/>
       <td key="executor3" rowSpan="2" colSpan="4">
@@ -521,7 +531,7 @@ helpers.generateUserReportTable = function(users, dateWords) {
       </td>
       <td/>
       <td key="executor4" rowSpan="2" colSpan="4">
-
+          {nameA}
       </td>
       {generateTds(7)}
       <td key="executor11" rowSpan="2" colSpan="4">
