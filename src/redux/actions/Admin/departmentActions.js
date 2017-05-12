@@ -43,18 +43,11 @@ export function loadDepTree() {
 }
 
 export function loadDepartment(department) {
-    console.log("department");
-    console.log(department);
-    console.log("department");
   const handler = (json, dispatch, getState) => {
 
     const department = new Department(json.data);
     dispatch(setDepartment({department}));
-    console.log("sdkljflksdjflkjsldkjf")
-    console.log("sdkljflksdjflkjsldkjf")
-    console.log("sdkljflksdjflkjsldkjf")
-    console.log("sdkljflksdjflkjsldkjf")
-      console.log(department);
+      // console.log(department);
   }
   return fetchAsync(`/get/department?id=` + department.id, handler);
 }

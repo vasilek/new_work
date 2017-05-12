@@ -22,6 +22,7 @@ export function getUsers() {
   return (dispatch, getState) => {
     const page = getState().Admin.usersPage;
     const currentOffset = page*limit;
+      console.log(currentOffset)
     const handler = (json, dispatch, getState) => {
       const users = new UsersTree(json.data.users);
       dispatch(setUsers(users));
@@ -30,6 +31,8 @@ export function getUsers() {
     let q = "";
     if(query !== "") {
       q = "&query="+encodeURIComponent(query);
+      console.log(q)
+
     }
     dispatch(fetchAsync(`/all/users?limit=${limit}&offset=${currentOffset}`+q,handler));
   }

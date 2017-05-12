@@ -55,6 +55,7 @@ const  UserInfoComponent =  class UserInfo extends React.Component {
     const props=this.props;
     const user = props.user;
     const {handleSubmit} = props;
+    console.log("props", props)
     if(!user.name) {
       return <div/>;
     } else {

@@ -1,375 +1,379 @@
 .taskPanel {
-  margin:5px;
-  min-height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 4px;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin: 5px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.ReactModal__Content .taskPanel{
-    box-shadow:none;
+.ReactModal__Content .taskPanel {
+    box-shadow: none;
 }
 
-.ReactModal__Overlay .taskPanel  {
-  background-color: transparent;
-  border: none;
+.ReactModal__Overlay .taskPanel {
+    background-color: transparent;
+    border: none;
 }
 
 textarea.fieldValue.taskHeader {
-  width:100%;
+    width: 100%;
+}
+.global-task-container {
+    height: 100%;
+    overflow-y: auto;
 }
 
-.global-task-container .Select--multi{
-  max-width: 300px;
+.global-task-container .Select--multi {
+    max-width: 300px;
 }
 
-.labor-main-container.contained h2{
-  border-bottom: 1px solid black;
+.labor-main-container.contained h2 {
+    border-bottom: 1px solid black;
 }
 
 .modalForm .taskPanel {
-  border: none;
+    border: none;
 }
 
 .panelText {
-  float:left;
-  clear:both;
-  margin:5px;
+    float: left;
+    clear: both;
+    margin: 5px;
 }
 
-.laborBlock > div{
--ms-flex-preferred-size: auto!important;
+.laborBlock > div {
+    -ms-flex-preferred-size: auto !important;
 }
 
-.rightPanel  .contained {
-  -ms-flex-preferred-size: auto!important;
+.rightPanel .contained {
+    -ms-flex-preferred-size: auto !important;
 }
 
 .ReactModal__Content .contained {
-        -ms-flex-preferred-size: auto!important;
+    -ms-flex-preferred-size: auto !important;
 }
 
 .filter-popover .contained {
-    -ms-flex-preferred-size: auto!important;
+    -ms-flex-preferred-size: auto !important;
 }
 
 .panelText.fullWidth {
-  width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 @media all and (min-width: 1000px) {
-  .executorNames{
-    display: flex;
-    flex-direction: row;
-  }
-  .executorHeader {
-    display: flex;
-    flex-direction: column;
-  }
+    .executorNames {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .executorHeader {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media all and (min-width:1500px) {
-  .executorNames{
-    display: flex;
-    flex-direction: row;
-  }
-  .executorHeader {
-    display: flex;
-    flex-direction: row;
-  }
+@media all and (min-width: 1500px) {
+    .executorNames {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .executorHeader {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .form-checkbox {
-  width: 20px;
-   height: 20px;
-   display: block;
+    width: 20px;
+    height: 20px;
+    display: block;
 }
 
 .fullWidth {
-  width:100%;
+    width: 100%;
 }
 
-
 .fieldValue.taskHeader {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .formInput {
-  height: 30px;
+    height: 10%;
 }
 
 .panelLabel {
-  text-decoration: underline;
-  margin:5px 0;
-  float: left;
+    text-decoration: underline;
+    margin: 5px 0;
+    float: left;
 }
 
-
 .fieldValue {
-  border: none;
-  border-bottom: 1px solid black;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 .standard-field {
-  height:30px;
+    height: 10%;
 
 }
 
 .fieldValue:focus {
-  outline: none;
+    outline: none;
+    height: 100%;
 }
 
 .infoHeaderBlock .datePicker {
-  margin-top: 8px!important;
-  margin-left: 5px;
+    margin-top: 8px !important;
+    margin-left: 5px;
     border: none;
     border-bottom: 1px solid black;
     outline: none;
 }
 
-
-.infoHeaderBlock .singleExecutor{
-  margin-top: 0;
+.infoHeaderBlock .singleExecutor {
+    margin-top: 0;
 }
 
 .infoHeaderBlock > div > span {
-  display: block;
-  margin-top: 8px!important;
-  float: left;
-  margin-left: 5px;
+    display: block;
+    margin-top: 8px !important;
+    float: left;
+    margin-left: 5px;
 }
 
-
-.infoHeaderBlock .Select--multi{
-  min-width: 80%;
-  max-height: 38px;
+.infoHeaderBlock .Select--multi {
+    min-width: 80%;
+    max-height: 38px;
 }
+
 .infoHeader {
-  padding: 5px 60px 5px 5px;
-  border-bottom: 1px solid black;
-  max-height: 50px;
-  min-height: 35px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    padding: 5px 60px 5px 5px;
+    border-bottom: 1px solid black;
+    max-height: 50px;
+    min-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .taskInfoTabs > div > div:first-child {
-  background-color: white!important;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-height: 60px;
+    background-color: white !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 60px;
 }
 
 .taskInfoTabs > div > div:nth-child(2) {
-  display: none;
+    display: none;
 }
 
 .noDisplay {
-  display: none!important;
+    display: none !important;
 }
 
-.executorHeader{
-  align-items: center;
+.executorHeader {
+    align-items: center;
 }
 
 .executorHeader > span {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .singleExecutor {
-  position: relative;
+    position: relative;
 }
 
 .singleExecutor span {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right: 0;
-  position: absolute;
-  display: block;
-  float: left;
-  line-height: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    float: left;
+    line-height: 25px;
 }
 
-
 .infoHeaderBlock > div > div:nth-child(2) {
-  margin-left: 30px;
+    margin-left: 30px;
 }
 
 .user {
-  width: 30px;
-  height: 30px;
-  float: left;
+    width: 30px;
+    height: 30px;
+    float: left;
 }
 
 .calendar {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
     float: left;
 }
 
 .singleExecutor {
-  height: 25px;
-  width: 25px;
-  background: #DDDDDD;
-  border-radius: 30px;
-  border: 2px solid black;
-  text-align: center;
-  float:left;
-  margin:0 5px;
-  font-size: 14px;
+    height: 25px;
+    width: 25px;
+    background: #DDDDDD;
+    border-radius: 30px;
+    border: 2px solid black;
+    text-align: center;
+    float: left;
+    margin: 0 5px;
+    font-size: 14px;
 }
 
 .global-task-container textarea[name="name"] {
-  width:100%;
-  height: 50px;
+    width: 100%;
+    height: 50px;
 }
 
-.labor-main-container input[name="comment"]{
-  width:100%;
-  border-bottom: none;
+.labor-main-container input[name="comment"] {
+    width: 100%;
+    border-bottom: none;
 }
 
 .singleExecutor.non-distributed {
-  background: rgba(255,255,0,0.6);
+    background: rgba(255, 255, 0, 0.6);
 }
 
 .noneExecutor span {
-  height: 30px;
-  width: 30px;
-  background: #DDDDDD;
-  border-radius: 3px;
-  border: 2px solid black;
-  text-align: center;
-  float:left;
-  margin:5px;
+    height: 30px;
+    width: 30px;
+    background: #DDDDDD;
+    border-radius: 3px;
+    border: 2px solid black;
+    text-align: center;
+    float: left;
+    margin: 5px;
 }
 
 .singleExecutor span {
-  text-align: center;
-  width:100%;
-  margin-left: 0;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
 }
 
 .clickable-image.ellipsis {
-  width: 30px;
-  height: 30px;
-}
-.clickable-image.clock {
-  width: 30px;
-  height: 30px;
-  margin: 0 5px;
-}
-.clickable-image.comment {
-  width: 30px;
-  height: 30px;
-  margin: 0 5px;
-}
-svg.active {
-  fill: #02ceff!important
+    width: 30px;
+    height: 30px;
 }
 
+.clickable-image.clock {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.clickable-image.comment {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+svg.active {
+    fill: #02ceff !important
+}
 
 .taskInfoTab {
-  color:black!important;
-  max-width: 150px;
-  font-size: 12px!important;
-  margin: 5px 0!important;
-  background-color: #DDDDDD!important;
-  border: 1px solid black!important;
+    color: black !important;
+    max-width: 150px;
+    font-size: 12px !important;
+    margin: 5px 0 !important;
+    background-color: #DDDDDD !important;
+    border: 1px solid black !important;
 }
 
 .taskInfoTab:first-child {
-    border-right: none!important;
+    border-right: none !important;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
 .labor-info-container .infoHeader {
-  min-height:50px;
+    min-height: 50px;
 }
 
-.labor-info-container .infoHeaderBlock img{
-  margin-top: 2px;
+.labor-info-container .infoHeaderBlock img {
+    margin-top: 2px;
 }
-
 
 .labor-info-container textarea[name="comment"] {
-  font-family: serif;
-  font-size: medium;
-  border: none!important;
+    font-family: serif;
+    font-size: medium;
+    border: none !important;
 }
 
-
-.labor-info-container .infoHeaderBlock .react-datepicker__input-container{
-  margin-top: 8px!important;
-  margin-left: 5px;
+.labor-info-container .infoHeaderBlock .react-datepicker__input-container {
+    margin-top: 8px !important;
+    margin-left: 5px;
 }
 
 .addTrudButtonContainer {
-  max-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
-- background-color: #f8f8f9;
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -background-color: #f8f8f9;
 }
 
 .no-update .taskPanel {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .no-update .taskHeader {
-  pointer-events: none;
+    pointer-events: none;
 }
 
-.no-update .infoHeaderBlock{
-  pointer-events: none;
+.no-update .infoHeaderBlock {
+    pointer-events: none;
 }
 
 .addTrudButton {
-  height: 30px;
-  width:200px;
-  text-align: center;
-  line-height: 30px;
-  background-color: #95BCF2;
-  border: 1px solid black!important;
-  cursor: pointer;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #95BCF2;
+    border: 1px solid black !important;
+    cursor: pointer;
 }
 
 .addTrudButton.disabled {
-  pointer-events: none;
-  background-color: #CCCCCC!important;
+    pointer-events: none;
+    background-color: #CCCCCC !important;
 }
 
 .trud {
-  margin: 5px;
+    margin: 5px;
 }
 
 .comment {
-  margin: 5px;
+    margin: 5px;
 }
 
 .taskInfoTab:nth-child(2) {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
-.taskInfoTab.active{
-  background-color: #95BCF2!important;
+.taskInfoTab.active {
+    background-color: #95BCF2 !important;
 }
 
-.taskInfoTab>div>div{
-  height:30px!important;
+.taskInfoTab > div > div {
+    height: 30px !important;
 }
 
 .taskInfoTab.active {

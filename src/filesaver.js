@@ -249,7 +249,7 @@ function sheet_from_array_of_arrays_table(data, opts) {
     const bottomBorder = {bottom: {style: "thin"}};
     const thickBorder =  {top :{style: "medium"}, bottom: {style: "medium"},left: {style: "medium"}, right: {style: "medium"}};
     const valignment = function(r,c) {
-      if((r > data.length - 13) && (c < 4 ) || (r > data.length - 7) || (r == 21 || r == 22 || r == 26 || r == 27 && c <= 18)) {
+      if((r > data.length - 13)  || (r > data.length - 7) ) {
         return "bottom";
       }
       return "center";
@@ -264,6 +264,7 @@ function sheet_from_array_of_arrays_table(data, opts) {
       }
     }
     const fntSize = function(r, c) {
+        // console.log(data.length);
       if(((r == data.length - 12) || (r == data.length - 11)|| (r == data.length - 10)|| (r == data.length - 9)) && (c > 26 && c <45)) {
         return ["10", true];
       }
@@ -271,27 +272,52 @@ function sheet_from_array_of_arrays_table(data, opts) {
         // return "14";
         return ["14", true];
       }
-      if (r == 31){
-          return ["8", false];
-      }
-      if (r == 26 || r == 27) {
+      // if (r == 31){
+        //     return ["8", false];
+        // }
+        // if (r == 26 || r == 27) {
+        //       return ["8", false];
+        //   }
+        // if (r == 28) {
+        //       return ["7", false];
+        //   }
+
+
+      if (r == data.length - 2  && c < 45)
+        {
+            return ["8",false];
+        }
+        if (r == data.length - 5  && c < 45)
+        {
+            return ["7",false];
+        }
+        if ((r == data.length - 6) || (r == data.length - 7) && c < 45)
+        {
+            return ["8",false];
+        }
+        if (r == data.length - 10 && c < 4) {
             return ["8", false];
         }
-      if (r == 28) {
+        if (r == data.length - 10 && c > 4) {
             return ["7", false];
         }
-      if(r > data.length - 13 && c > 36) {
-        return ["8",false];
-      }
-      if((r > data.length - 13  && c > 11 && c < 20)) {
-        return ["7",false];
-      }
-      if((r > data.length - 13) && (c < 4)) {
-        return ["8",false];
-      }
-      if((r > data.length - 13 && r < 30) && (c >= 4)) {
-        return ["7",false];
-      }
+        if (r == data.length - 11  || r == data.length - 12 && c < 21) {
+            return ["8", false];
+        }
+        // }
+
+      // if(r > data.length - 13 && c > 36) {
+      //   return ["8",false];
+      // }
+      // if((r > data.length - 13  && c > 11 && c < 20)) {
+      //   return ["7",false];
+      // }
+      // if((r > data.length - 13) && (c < 4)) {
+      //   return ["8",false];
+      // }
+      // if((r > data.length - 13 && r < 30) && (c >= 4)) {
+      //   return ["7",false];
+      // }
       if(r==0 || r ==1 && c <=36) {
         // return "14";
         //  Заголовок
@@ -331,7 +357,7 @@ function sheet_from_array_of_arrays_table(data, opts) {
       if((R === data.length - 5) && ((C >=5 && C<9) || (C >=10 && C<14) || (C >=15 && C<19))) {
         return {top: {style: "thin"}};
       }
-      if((R === data.length - 5) && ((C >=31 && C<35) || (C >=36 && C<40) || (C >=41 && C<45))) {
+      if((R === data.length - 5) && ((C >=31 && C<35) || (C >=36 && C<40) || (C >=41 && C<46))) {
         return {top: {style: "thin"}};
       }
       if((R === data.length - 2) &&((C < 10) || (C > 27 && C <36))) {

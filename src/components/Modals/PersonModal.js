@@ -50,18 +50,18 @@ const personList = class person extends React.Component {
         tree.forEach(x => {
             const name = x.name;
             const children = x.children;
-            console.log(name);
+            // console.log(name);
 
             if(children && children.length > 0) {
                 ids = ids.concat(this.clearAllIds(children));
             }
-            ids = ids.filter(y => y.name !== name);
+            ids = ids.filter(y => y.name == name);
         });
         return ids;
     }
 
     checkboxValueChangeDep(name, id, children, users, e) {
-
+        console.log("ВЫБРАННЫЕ", this.state.chosenDeps);
         var newArr = [];
         var newArr1 = [];
 
@@ -85,16 +85,31 @@ const personList = class person extends React.Component {
 
 
         } else {
-            newArr = this.state.chosenDeps.filter(x => x.name !== name);
+            // console.log(name)
+            var newArr = this.state.chosenDeps.filter(x => x.name !== name);
+
+            // var newArr = children;
+            // var ch = children.map(x=> x.name);
+            // var newArr2 = []
+            // for (var i in ch) {
+            //     newArr2[i] = newArr.filter(x => x.name == ch[x])
+            // }
+            // console.log(newArr2);
+            // ch.forEach(x=>
+            //
+            // )
+            // console.log(ch)
+            // newArr.filter()
             this.setState({chosenDeps: this.clearAllIds(newArr)});
-            newArr = this.clearAllIds(newArr);
+            // newArr = this.clearAllIds(newArr);
+            // console.log(newArr)
             newArr.forEach(x => {
                     for (var y in users) {
                         if (users[y].department == x.name){
                             newArr1.push(users[y]);
                         }
-                        else {
-                        }
+                        // else {
+                        // }
                     }
                 }
             );
@@ -102,6 +117,7 @@ const personList = class person extends React.Component {
 
             this.setState({chosenDeps: this.clearAllIds(newArr)});
             this.setState({chosenUsers: newArr1.map(x => ({id: x.id, name: x.name}))});
+
 
         }
     }
@@ -169,11 +185,11 @@ const personList = class person extends React.Component {
                 const children = dep.children;
                 const parent_id = dep.parent_id;
                 const users = [];
-                if ([...new Set(allUsers)].indexOf(name) >= 0) {
+                // if ([...new Set(allUsers)].indexOf(name) >= 0) {
                     ZZ.push({id: id, name: name, level: level, children: children, parent_id: parent_id, users: []});
-                }
+                // }
             }
-
+            // console.log(ZZ)
 
 
             if (ZZ.length !== 0){
@@ -192,9 +208,9 @@ const personList = class person extends React.Component {
                 glist = ZZ.reverse().map(x =>
                     <div style={{marginLeft:x.level*30}}>
                         <div
-                            style={{display: "flex", flexDirection: "row"}} key={x.id}>
+                            style={{display: "flex", flexDirection: "row"}} key={x.id} >
 
-                            <input onChange={this.checkboxValueChangeDep.bind(this, x.name, x.id, x.children, userTree)} checked={this.state.chosenDeps.map(y => y.name).indexOf(x.name) !== -1} type="checkbox" name="a"/>
+                            {/*<input onChange={this.checkboxValueChangeDep.bind(this, x.name, x.id, x.children, userTree)} checked={this.state.chosenDeps.map(y => y.name).indexOf(x.name) !== -1} type="checkbox" name="a"/>*/}
                             <div>{x.name}</div>
                         </div>
 

@@ -165,7 +165,7 @@ export default class TaskList extends React.Component {
     />
     )
     return (
-      <Container className="task-list-container">
+      <Container className="task-list-container" style={{overflow:"auto"}}>
         <div className="tasksContainer" style={fullSize} ref="taskTree">
           <div style={buttonContainerStyles}>
             <div>

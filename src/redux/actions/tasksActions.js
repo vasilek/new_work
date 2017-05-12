@@ -280,7 +280,7 @@ export function loadWorkCodes() {
 
 export function loadFinances() {
     const handler = (data, dispatch) => {
-        let finances =  data.data.finances.map(x => ({value: x.id, label: x.value}));
+        let finances =  data.data.finances.map(x => ({value: x.id, label:  x.value + ", " + x.description}));
         dispatch(setFinances({
             finances
         }));

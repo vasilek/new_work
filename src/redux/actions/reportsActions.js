@@ -41,7 +41,9 @@ export function createTasksReport(obj) {
         dispatch(setReportTableData({table: parsedTable}));
       }
       const day = getState().Table.currentWeek;
-      const range = getDateRange(day);
+      const days = getState().Table.chosenDays;
+      // const range = getDateRange(day);
+      const range = getDateRange(days);
       const date_from = Math.floor((+range.first)/1000);
       const date_to = Math.floor((+range.last)/1000);
       const user_ids = (obj.user_ids && obj.user_ids.length>0) ? obj.user_ids.join(",") : undefined;
@@ -72,7 +74,11 @@ export function createFinanceReport(obj) {
         dispatch(setReportTableData({table: parsedTable}));
       }
       const day = getState().Table.currentWeek;
-      const range = getDateRange(day);
+      const days = getState().Table.chosenDays;
+      console.log("DAY",day);
+      console.log("DAYS",days);
+      // const range = getDateRange(day);
+      const range = getDateRange(days);
       const date_from = Math.floor((+range.first)/1000);
       const date_to = Math.floor((+range.last)/1000);
       const user_ids = (obj.user_ids && obj.user_ids.length>0) ? obj.user_ids.join(",") : undefined;

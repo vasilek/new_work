@@ -10,11 +10,14 @@ deleteTableData
 import {changeWeek, setCurrentWeek, setCurrentDay, loadTableData} from "../../redux/actions/tableActions";
 
 
+
 const mapStateToProps = (state,ownProps) => {
   return {
     finances: state.finances,
     currentTasks: state.Reports.reportTasks,
-    currentWeek: state.Table.currentWeek
+    currentWeek: state.Table.currentWeek,
+      departments: state.Admin.departments,
+      department: state.Admin.department
   }
 }
 
@@ -91,7 +94,8 @@ const mapDispatchToProps = (dispatch) => {
     },
     radioChanged: () => {
       dispatch(deleteTableData());
-    }
+    },
+
   }
 }
 

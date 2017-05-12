@@ -20,7 +20,8 @@
 }
 
 .current-day {
-  color: red;
+  color: black;
+  background-color: cyan;
   font-weight: bold;
 }
 

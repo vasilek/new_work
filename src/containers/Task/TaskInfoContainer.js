@@ -33,6 +33,7 @@ import {loadPeopleTree} from "../../redux/actions/subordinateActions";
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        // finances_1: state.Admin.financesTable,
         task: ownProps.task,
         trudTask: state.currentAddingTrudTask,
         activeTab: state.activeTaskTab,
@@ -40,6 +41,8 @@ const mapStateToProps = (state, ownProps) => {
         codes: state.codes,
         finances: state.finances,
         executors: state.User.subordinates
+        // executors: ownProps.task.executors,
+        // rawExecutors: ownProps.task.executors
     }
 }
 import LaborToSend from "../../Entities/Tasks/LaborToSend";

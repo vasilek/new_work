@@ -60,6 +60,7 @@ const Table = combineReducers({
     tableData: tableReducers.setTableData,
     currentWeek: tableReducers.setCurrentWeek,
     currentDay: tableReducers.setCurrentDay,
+    chosenDays: tableReducers.setDays
 })
 
 const User = combineReducers({

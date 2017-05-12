@@ -3,15 +3,11 @@ import Container from "../Container";
 import "../styles/TaskInfo.css";
 import calendar from "../../Icons/calendar.svg";
 import human from "../../Icons/human.svg";
-import people from "../../Icons/people.svg";
 import {Field, reduxForm,change} from 'redux-form'
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
 import DPicker from "../formComponents/DatePicker";
 import { AppRegistry, Text, StyleSheet } from 'react-native';
-import Modal from 'react-modal';
-import {findDOMNode} from 'react-dom'
 import ReactTooltip from 'react-tooltip'
 import {
     WorkCodeField,
@@ -23,6 +19,7 @@ import {
 
 import PersonModalContainer from "../../containers/ModalContainers/PersonModalContainer";
 import DepartmentModalContainer from "../../containers/ModalContainers/DepartmentModalContainer";
+import helpers from "./taskHelpers";
 // import Popup from 'react-popup';
 
 
@@ -48,13 +45,9 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
         }
     }
     clickHandler() {
-        this.props.getUsers();
+        // this.props.getUsers();
         this.props.loadDepTree();
         this.props.loadPeopleTree();
-
-        // this.props.loadFlatDepartments();
-
-        // console.log(this.props.departments);
 
         this.setState({isModalOpen: true});
     }
@@ -76,21 +69,20 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
     }
 
 
-
-    // showAll(x) {
-        // console.log('01234');
-        // return (<PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
-        //                       setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>);
-
-    // }
     componentDidUpdate() {
         ReactTooltip.rebuild();
     }
+
+
+
+
+
 
     render() {
 
         const props = this.props;
         const {handleSubmit} = props;
+        // this.props.changeFieldValue('startDate',);
         // console.log(props);
         // console.log(this.state.users);
         return (
@@ -106,16 +98,19 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                                     <img className="user" onClick={this.clickHandler.bind(this)} src={human} alt="logo" style={{marginRight:5}}/>
                                     <PersonModalContainer isModalOpen={this.state.isModalOpen} closeModal={this.closeModal.bind(this)}
                                                           setExecutors={(list) => { this.setExecutors(list); this.props.changeFieldValue('executors', list)}}/>
+                                    {helpers.createExecutors(this.state.executors)}
+                                    <Field name="startDate" component={DPicker} />
                                 </div >
 
-                                <Text data-tip={"<b>Исполнители</b>" + this.state.executors.map(x => '<br/>' + x.label  ) }  data-html data-iscapture="true" numberOfLines={1} style={{width:300}} >
-                                    {this.state.executors.map(x => <Text numberOfLines={1} key={x.value}> {x.label},</Text>)}
-                                </Text>
+                                {/*<Text data-tip={"<b>Исполнители</b>" + this.state.executors.map(x => '<br/>' + x.label  ) }  data-html data-iscapture="true" numberOfLines={1} style={{width:300}} >*/}
+                                    {/*{this.state.executors.map(x => <Text numberOfLines={1} key={x.value}> {x.label},</Text>)}*/}
+                                {/*</Text>*/}
 
-                                <div style={{marginLeft:60}}>
-                                    <img className="user" src={calendar} alt="logo" style={{margin:5}}/>
-                                    <Field name="startDate" component={DPicker}/>
-                                </div>
+                                {/*<div style={{marginLeft:60}}>*/}
+
+                                    {/*<img className="user" src={calendar} alt="logo" style={{margin:5}} />*/}
+
+                                {/*</div>*/}
                             </div>
                         </Container>
                     </div>
@@ -129,6 +124,8 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                             <Panel label="Код работ">
                                 <WorkCodeField codes={this.props.codes}/>
                             </Panel>
+                        </Container>
+                        <Container containerStyle={codeBlockStyle} flex="3">
                             <Panel label="Статья финансирования">
                                 <FinancesField finances={this.props.finances}/>
                             </Panel>
@@ -136,7 +133,7 @@ const newTaskInfoComponent = class newTaskInfo extends React.Component {
                         <div className="taskPanel" flex="4" containerStyle={descriptionBlockStyle}>
                             <span className="panelLabel"> Описание </span>
                             <span className="panelText fullWidth">
-            <Field className="fieldValue" style={{margin: "10px", minHeight: "200px", minWidth: "90%"}}
+            <Field className="fieldValue" style={{margin: "10px", minHeight: "90%", minWidth: "90%"}}
                    name="description" component="textarea" placeholder="Описание задачи"/>
           </span>
                         </div>
