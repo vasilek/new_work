@@ -1,5 +1,5 @@
 import React from "react";
-import {getDateRange, getDateMonthRange} from "../../redux/actions/tableActions";
+import {getDateRange,getDateRange_, getDateMonthRange} from "../../redux/actions/tableActions";
 let helpers = {};
 import Icon from "../../Icons/Icon";
 import taskHelpers from "../Tasks/taskHelpers";
@@ -7,27 +7,17 @@ import moment from "moment";
 
 
 helpers.generateHeaders = function (headers = [], datedLabors, onAccept, calendar=[]) {
-    // console.log("календарь", calendar);
-    // var headersWithYear = {};
     var currentYear= moment().format("YYYY");
-    // for (var x in headers){
-    //     var header = headers[x];
-    //     var fullDate = currentYear + "-" + headers[x].split(".")[1] + "-" + headers[x].split(".")[0];
-    //     console.log(header, fullDate);
-    //     headersWithYear.header = fullDate;
-    // }
-    // console.log(headersWithYear)
+
     let th = [<th key="0" className="table-header" width="30%">Название</th>];
     for (var i = 1; i <= headers.length; i++) {
         const newLabors = datedLabors[headers[i - 1]] ? datedLabors[headers[i - 1]].filter(x => x.rawstatus === 0) : [];
         const canAcceptAll = (newLabors.length > 0) && newLabors.every(x => x.rights.accept);
         const currentDay = moment().format("DD.MM");
         const currentFullDay = moment().format("YYYY-MM-DD");
-        // console.log(headers);
+
         var backColor = currentDay == headers[i - 1] ? "cyan" : "white";
         var status = calendar[currentYear + "-" + headers[i-1].split(".")[1] + "-" + headers[i-1].split(".")[0]]["classNames"][0].trim();
-        // console.log(status);
-
         var fontColor = status=="day-type-2" ? "red" : "black";
 
         th[i] = (
@@ -52,8 +42,6 @@ helpers.generateRows = function (data = [], clickHandler, rowClickHandler, props
     const elements = data.data;
     const headers = data.headers;
     const activeId = props.activeIndexes.taskId;
-    console.log("el",elements)
-    console.log(elements)
     let finalTimes = {};
     const tdWidth = data.headers ? 70 / data.headers.length : 0;
     if (!data || data.length === 0) {
@@ -196,13 +184,14 @@ function generateTds(number) {
     return ths;
 }
 
-helpers.generateUserReportTable = function (users, dateWords, name, position, chname, chposition) {
+helpers.generateUserReportTable = function (users, dateWords, name, position, chname, chposition, half) {
+
     let nameL = name.split(" ");
     let chnameL = chname.split(" ");
+    var daysNumber = 31;
     const nameA = nameL[0] + " " + nameL[1][0] + ". " + nameL[2][0] + ".";
     const chnameA = chnameL[0] + " " + chnameL[1][0] + ". " + chnameL[2][0] + ".";
     let rows = [];
-    const daysNumber = 31;
     const totalTableWidth = daysNumber + 3 + 9;
     const headerRow = [
         (<tr key="header-row" className="noDisplay noBorder">
@@ -311,6 +300,7 @@ helpers.generateUserReportTable = function (users, dateWords, name, position, ch
         <tr key="a10" className="noDisplay">
         </tr>
     ]
+
     rows = headerRow.concat([(
         <tr key="first-row">
             <th className="tg-yw4l" colSpan="3" rowSpan="4" key="fio-header">
@@ -322,7 +312,7 @@ helpers.generateUserReportTable = function (users, dateWords, name, position, ch
             <th className="tg-yw4l" colSpan="3" rowSpan="4" key="position-header">
                 Должность (профессия)
             </th>
-            <th className="tg-yw4l" rowSpan="2" colSpan={daysNumber + 6} key="monthDates">
+            <th className="tg-yw4l" rowSpan="2"  colSpan={daysNumber + 6} key="monthDates">
                 Числа месяца
             </th>
         </tr>),
@@ -346,6 +336,7 @@ helpers.generateUserReportTable = function (users, dateWords, name, position, ch
     rownumbers.push(<td key={"hm"} className="tg-yw4l" colSpan="3">{daysNumber + 5}</td>);
     let dayTypesInfo = [];
     let financeRows = [];
+
     rows.push(
         <tr key={"second-row" + ind}>
             {daysArr.slice(0, 15)}
@@ -661,6 +652,7 @@ helpers.generateUserReportTable = function (users, dateWords, name, position, ch
 }
 
 helpers.getDateRange = getDateRange;
+helpers.getDateRange_ = getDateRange_;
 helpers.getDateMonthRange = getDateMonthRange;
 
 export default helpers;

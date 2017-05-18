@@ -45,3 +45,5 @@ export function setFlatDepartments(state = [], action) {
       return state;
   }
 }
+
+

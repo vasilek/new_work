@@ -15,6 +15,7 @@ import {loadPeopleTree} from "../../redux/actions/subordinateActions";
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        half: state.Table.half,
         reportsTable: state.Reports.reportsTableData,
         currentWeek: state.Table.currentWeek,
         chosenDays: state.Table.chosenDays,
@@ -23,7 +24,8 @@ const mapStateToProps = (state, ownProps) => {
         position: state.User.user.position,
         Y: state.User,
         departments: state.Admin.departments,
-        department: state.Admin.department
+        department: state.Admin.department,
+        typeReport: state.Table.typeReport
     }
 }
 

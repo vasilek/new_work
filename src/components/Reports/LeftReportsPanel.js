@@ -3,7 +3,7 @@ import Container from "../Container";
 import FlatButton from 'material-ui/FlatButton';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import Select from 'react-select';
-import {Panel} from "../formComponents/ReusableComponents";
+// import {Panel} from "../formComponents/ReusableComponents";
 import moment from 'moment';
 import calendar from "../../Icons/calendar.svg";
 import DatePicker from 'react-datepicker';
@@ -18,8 +18,9 @@ const datepickerStyles = {
     display: "flex",
     float: "right",
     flexDirection: "row",
-    justifyContent: "space-between",
-    background: "white"
+    justifyContent: "center",
+    background: "white",
+    alignItems: "flex-end"
 }
 
 
@@ -58,19 +59,19 @@ const patePicker = (props, range, isMonth) => (
 
 
 
-const datePicker = (props, range, type, handlePrev,handleNext, selectDate, context,ref, dateClick, text)=> (
+const datePicker = (props, range, type,  selectDate, context,ref, dateClick, text)=> (
+
     <div style={datepickerStyles}>
         <div className="from-to">{text}</div>
-        <img className="clickable-image left" onClick={handlePrev.bind(context, type)}  src={left} alt="logo" />
+        {/*<img className="clickable-image left" onClick={handlePrev.bind(context, type)}  src={left} alt="logo" />*/}
         <div className="dateContainer">
             <DatePicker
                 ref={ref}
                 selected={range.first ? moment(range.first) : moment(new Date())}
                 onChange={selectDate.bind(context, type)}
             />
-            <span className="weekVisualiser" onClick={dateClick}>{"День " + moment(range.first).format("DD MM YYYY")  }</span>
+            <span className="weekVisualiser" onClick={dateClick}>{"День " + moment(range.first).format("DD MM YYYY")}</span>
         </div>
-        <img className="clickable-image right" onClick={handleNext.bind(context, type)}  src={right} alt="logo" />
     </div>
 )
 
@@ -112,7 +113,9 @@ export default class Labors extends React.Component {
             user_ids: [],
             finance_ids: [],
             currentUser: false,
-            user_id: false
+            user_id: false,
+            halfRadio: "month",
+            // half: 0
         }
     }
 
@@ -126,8 +129,6 @@ export default class Labors extends React.Component {
 
     closeModal() {
         this.setState({isModalOpen: false});
-        // console.log("state ",this.state.selectedUsers);
-        // console.log("props ",this.props.executorsFromForm);
     }
 
 
@@ -137,31 +138,15 @@ export default class Labors extends React.Component {
         }
     }
 
-    add2Obj(first, second) {
-        var third = [];
-        var temp = [...new Set(first.concat(second.map(x => ({value: x.id, label: x.name}))).map(x => x.label))];
-        for (var i in temp) {
-            third.push({label: temp[i]})
-        }
-        // console.log(third);
-        return third;
-    }
-
-
     createReport(radio) {
         if (radio === "tasks") {
             this.props.createTaskReport(this.state);
         } else if (radio === "finance") {
             this.props.createFinanceReport(this.state);
         } else if (radio === "table") {
-            this.props.createUserReport(this.state);
+            this.props.createUserReport(this.state, this.props.half);
         }
     }
-
-    //
-    // saveDepartment(id) {
-    //       return fetch(`/get/department?id=` + id);
-    //   }
 
     radiogroupChanged(event, val) {
         if (val === "tasks") {
@@ -172,6 +157,7 @@ export default class Labors extends React.Component {
                 currentUser: false,
                 user_id: false
             });
+            this.props.setTaskReport();
         } else if (val === "finance") {
             this.setState({
                 currentRadio: val,
@@ -180,19 +166,30 @@ export default class Labors extends React.Component {
                 currentUser: false,
                 user_id: false
             });
+            this.props.setFinanceReport();
         } else {
             if (this.props.departments.treeNormalized) {
                 this.props.loadDepartment(this.props.departments.treeNormalized.byId[this.props.Y.user.department][0]);
-                // console.log(1)
             }
-            // console.log("")
             this.setState({
                 currentRadio: val,
                 task_ids: [],
                 selectedTasks: [],
                 finance_ids: [],
-                selectedFinances: []
+                selectedFinances: [],
             });
+            this.props.setTableReport();
+        }
+        this.props.radioChanged();
+    }
+
+    halfRadioChanged(event, val) {
+        if (val === "half-month") {
+            this.setState({halfRadio: val});
+            this.props.setHalf();
+        } else {
+            this.setState({halfRadio: val});
+            this.props.setFull();
         }
         this.props.radioChanged();
     }
@@ -246,7 +243,7 @@ export default class Labors extends React.Component {
     }
 
     handlePrev(type) {
-        if(type == "start") {
+        if(type === "start") {
             this.props.changeFirstWeek(getPrevWeek(this.props.chosenDays.first));
         } else {
             this.props.changeLastWeek(getPrevWeek(this.props.chosenDays.last));
@@ -254,7 +251,7 @@ export default class Labors extends React.Component {
 
     }
     handleNext(type) {
-        if(type == "start") {
+        if(type === "start") {
             this.props.changeFirstWeek(getNextWeek(this.props.chosenDays.first));
         } else {
             this.props.changeLastWeek(getNextWeek(this.props.chosenDays.last));
@@ -263,20 +260,22 @@ export default class Labors extends React.Component {
     }
 
     dateSelect(type, val) {
-        if(type == "start") {
+        if(type === "start") {
             this.props.changeFirstWeek(val.toDate());
         } else {
             this.props.changeLastWeek(val.toDate());
         }
+        console.log(val.toDate());
 
     }
 
     render() {
         const props = this.props;
         let picker = <div className="noDisplay"/>;
-        const range1 = helpers.getDateRange(props.chosenDays.first);
-        const range2 = helpers.getDateRange(props.chosenDays.last);
-
+        const range1 = helpers.getDateRange_(props.chosenDays.first);
+        const range2 = helpers.getDateRange_(props.chosenDays.last);
+        console.log("range1",range1)
+        console.log("range2",range2)
         const debouncedFetch = debounce((query, callback) => {
             if (!query) {
                 callback(null, {options: []});
@@ -298,7 +297,11 @@ export default class Labors extends React.Component {
                 });
         }, 500);
         const radio = this.state.currentRadio;
-        const range = radio === "table" ? helpers.getDateMonthRange(props.currentWeek) : helpers.getDateRange(props.currentWeek);
+        // const radio = this.props.typeReport;
+        console.log(this.props)
+        // const range = radio === "table" ? helpers.getDateMonthRange(props.currentWeek) : helpers.getDateRange(props.currentWeek);
+        const range = radio === "table" ? helpers.getDateMonthRange(props.currentWeek) : helpers.getDateRange_(props.chosenDays);
+        console.log("RANGE,", range );
         let reportSelector = <div/>;
         switch (radio) {
             case "tasks":
@@ -308,6 +311,7 @@ export default class Labors extends React.Component {
                         placeholder="Задачи"
                         value={this.state.selectedTasks}
                         onChange={this.handleTaskSelectChange.bind(this)}
+                        style={{display:'block', overflow:'auto'}}
                         options={this.props.currentTasks}
                     />
                 )
@@ -317,8 +321,9 @@ export default class Labors extends React.Component {
                     <Select value={this.state.selectedFinances}
                             multi={true}
                             placeholder="Статьи финансирования"
-                            value={this.state.selectedFinances}
+                            // value={this.state.selectedFinances}
                             onChange={this.handleFinanceSelectChange.bind(this)}
+                            style={{display:'block', overflow:'auto'}}
                             options={
                                 this.props.finances
                             } // <-- Receive options from the form
@@ -332,13 +337,31 @@ export default class Labors extends React.Component {
         picker = (
             <div className="weekPicker">
                 <div>
-                    {datePicker.call(this,props,range1, "start", this.handlePrev, this.handleNext, this.dateSelect, this, "start", this.startClick.bind(this), "От:")}
+                    {datePicker.call(this,props, range1, "start",  this.dateSelect, this, "start", this.startClick.bind(this), "От:")}
                 </div>
                 <div>
-                    {datePicker.call(this,props,range2, "end", this.handlePrev, this.handleNext, this.dateSelect, this, "end", this.endClick.bind(this), "До:")}
+                    {datePicker.call(this,props, range2, "end",  this.dateSelect, this, "end", this.endClick.bind(this), "До:")}
                 </div>
             </div>
         )
+        var halfLabel  = "С 1 по 15 " + moment(range.first).format("MMMM YYYY")
+        const monthButton = (
+            <RadioButtonGroup
+            // className={"report-type-choose-radio1"}
+            name="month"
+            onChange={this.halfRadioChanged.bind(this)}
+            valueSelected={this.state.halfRadio}
+            style={{marginLeft:20}}>
+            <RadioButton
+                value="month"
+                label="Месяц"
+            />
+            <RadioButton
+                value="half-month"
+                // label="С 1 по 15"
+                label={halfLabel}
+            />
+        </RadioButtonGroup>)
 
         return (
             <Container vertical={true}>
@@ -363,6 +386,7 @@ export default class Labors extends React.Component {
                                   placeholder={"Список выбранных сотрудников"}
                                   backspaceRemoves={false}
                                   ignoreCase={true}
+                                  style={{display:'block', overflow:'auto'}}
                                   onFocus={this.disableClick.bind(this, true)}
                                   onBlur={this.disableClick.bind(this, false)}
                                   loadOptions={debouncedFetch}/>
@@ -387,12 +411,32 @@ export default class Labors extends React.Component {
                     </RadioButtonGroup>
                     {reportSelector}
                 </div>
-                { radio == "table" ?
 
+                {/*<RadioButtonGroup*/}
+                    {/*// className={"report-type-choose-radio1"}*/}
+                    {/*name="month"*/}
+                    {/*style={{marginLeft:20}}>*/}
+                    {/*<RadioButton*/}
+                        {/*value="month"*/}
+                        {/*label="Месяц"*/}
+                    {/*/>*/}
+                    {/*<RadioButton*/}
+                        {/*value="half-month"*/}
+                        {/*label="Пол месяца"*/}
+                    {/*/>*/}
+                {/*</RadioButtonGroup>*/}
+                { radio === "table" ?
+                    monthButton
+                    :
+                    (<div></div>)}
+                { radio === "table" ?
                 patePicker(props, range, radio==="table")
                 :
                 picker}
+
+
                 <div className="button-report-create" flex="1">
+
                     <FlatButton style={{float: "right"}} onClick={this.createReport.bind(this, radio)}
                                 label="Создать отчет"/>
                 </div>

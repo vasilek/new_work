@@ -3,7 +3,12 @@ import {
     SET_WEEK,
     SET_DAY,
     SET_MONDAY,
-    SET_DAYS
+    SET_DAYS,
+    SET_HALF,
+    SET_FULL,
+    SET_FINANCE_REPORT,
+    SET_TASKS_REPORT,
+    SET_TABLE_REPORT
 } from "../actions/tableActions";
 
 function getMonday(d) {
@@ -51,6 +56,31 @@ export function setCurrentWeek(state = monday, action) {
             return state
     }
 }
+
+export function setFullOrHalf(state = 0, action) {
+    switch (action.type) {
+        case SET_FULL:
+            return 0;
+        case SET_HALF:
+            return 1;
+        default:
+            return state
+    }
+}
+
+export function setTypeReport(state = "task", action) {
+    switch (action.type) {
+        case SET_FINANCE_REPORT:
+            return "finance";
+        case SET_TASKS_REPORT:
+            return "tasks";
+        case SET_TABLE_REPORT:
+            return "table";
+        default:
+            return state
+    }
+}
+
 
 export function setDays(state = {first: new Date(), last: new Date()}, action) {
     switch (action.type) {

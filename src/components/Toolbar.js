@@ -20,7 +20,6 @@ const ToolbarStyles = {
 export default class ToolbarExamplesSimple extends React.Component {
 
   render() {
-      console.log(this.props.department);
     return (
       <Toolbar style={ToolbarStyles}>
         <div className="spki-block">

@@ -94,9 +94,11 @@ export function activateTask(obj) {
     const currentIndexes = getState().activeIndexes;
     if(currentIndexes.taskId === obj.taskId && currentIndexes.globalIndex == obj.globalIndex) {
       dispatch(toggleRightPanel({status: 0}));
+      console.log("0")
       dispatch(activateTaskList({taskId: -1, globalIndex: -1}));
     } else {
       dispatch(activateTaskList(obj));
+      console.log("1")
       dispatch(toggleRightPanel({status: 1}));
     }
   }

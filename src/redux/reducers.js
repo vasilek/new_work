@@ -54,13 +54,16 @@ const layoutBindings = {
 const Reports = combineReducers({
   reportTasks: reportsReducers.setReportTasks,
   reportsTableData: reportsReducers.setReportTableData
+
 })
 
 const Table = combineReducers({
     tableData: tableReducers.setTableData,
     currentWeek: tableReducers.setCurrentWeek,
     currentDay: tableReducers.setCurrentDay,
-    chosenDays: tableReducers.setDays
+    chosenDays: tableReducers.setDays,
+    half: tableReducers.setFullOrHalf,
+    typeReport: tableReducers.setTypeReport
 })
 
 const User = combineReducers({
@@ -86,6 +89,7 @@ const Admin = combineReducers({
   userView: usersReducers.setUser,
   usersPage: usersReducers.setUsersPage,
   financesPage: financesReducers.setFinancesPage,
+  financesTree: financesReducers.setFinancesTree,
   codesPage: codesReducers.setCodesPage,
   codesTable: codesReducers.setCodesTable,
   financesTable: financesReducers.setFinancesTable,

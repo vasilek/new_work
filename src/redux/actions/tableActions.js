@@ -8,10 +8,15 @@ export const SET_WEEK = "SET_WEEK";
 export const SET_MONDAY = "SET_MONDAY";
 export const SET_DAY = "SET_DAY";
 export const SET_DAYS = "SET_DAYS";
-
+export const SET_FULL = "SET_FULL";
+export const SET_HALF = "SET_HALF";
+export const SET_FINANCE_REPORT = "SET_FINANCE_REPORT";
+export const SET_TASKS_REPORT = "SET_TASKS_REPORT";
+export const SET_TABLE_REPORT = "SET_TABLE_REPORT";
 
 
 export function getDateRange(day) {
+    console.log("DAY!",day)
     var curr = new Date(day); // get current date
     var curr2 = new Date(day); // get current date
     var first = curr.getDate() - curr.getDay() + 1; // First day is the day of the month - the day of the week
@@ -21,7 +26,38 @@ export function getDateRange(day) {
     firstday.setHours(0, 0, 0, 0);
     var lastday = new Date(curr2.setDate(last));
     lastday.setHours(23, 59, 59, 999);
+    // console.log( first, last, firstday, lastday)
     return {first: firstday, last: lastday};
+}
+
+export function getDateRange_(day) {
+    // console.log("DAY?",day)
+    // // var first = curr.getDate() - curr.getDay() + 1; // First day is the day of the month - the day of the week
+    // // var last = first + 6; // last day is the first day + 6
+    // var first = new Date(day.first);
+    // first.setHours(0,0,0,0);
+    // // var first = first.getDate();
+    // var last = new Date(day.last);
+    // last.setHours(23, 59, 59, 999);
+    // // var last = last.getDate();
+    //
+    // // var firstday = new Date(first.setDate(first));
+    // // firstday.setHours(0, 0, 0, 0);
+    // // var lastday = new Date(curr2.setDate(last));
+    // // lastday.setHours(23, 59, 59, 999);
+    // return {first: first, last: last};
+    var curr = new Date(day); // get current date
+    var curr2 = new Date(day); // get current date
+    var first = curr.getDate(); // First day is the day of the month - the day of the week
+    var last =  curr2.getDate(); // last day is the first day + 6
+
+    var firstday = new Date(curr.setDate(first));
+    firstday.setHours(0, 0, 0, 0);
+    var lastday = new Date(curr2.setDate(last));
+    lastday.setHours(23, 59, 59, 999);
+    // console.log( first, last, firstday, lastday)
+    return {first: firstday, last: lastday};
+
 }
 
 
@@ -29,9 +65,10 @@ export function getDateMonthRange(day) {
     var curr_date = new Date(day);
 
     var first_day = new Date(curr_date.getFullYear(), curr_date.getMonth(), 1);
+    var middle_day = new Date(curr_date.getFullYear(), curr_date.getMonth(), 15);
 
     var last_day = new Date(curr_date.getFullYear(), curr_date.getMonth() + 1, 0);
-    return {first: first_day, last: last_day}
+    return {first: first_day, middle: middle_day, last: last_day}
 
     /*
      var month_end_date =formatted_date(new Date()); // limit current month date range upto current day.
@@ -44,6 +81,11 @@ export const setCurrentWeek = generateActionFunc(SET_WEEK);
 export const setCurrentDay = generateActionFunc(SET_DAY);
 export const setMonday = generateActionFunc(SET_MONDAY);
 export const setDays = generateActionFunc(SET_DAYS);
+export const setHalf = generateActionFunc(SET_HALF);
+export const setFull = generateActionFunc(SET_FULL);
+export const setFinanceReport = generateActionFunc(SET_FINANCE_REPORT);
+export const setTaskReport = generateActionFunc(SET_TASKS_REPORT);
+export const setTableReport = generateActionFunc(SET_TABLE_REPORT);
 
 export function changeWeek(obj) {
     return (dispatch, getState) => {

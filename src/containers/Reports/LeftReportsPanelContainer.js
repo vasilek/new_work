@@ -7,7 +7,18 @@ import {
     createUserReport,
     deleteTableData
 } from "../../redux/actions/reportsActions";
-import {changeWeek, setCurrentWeek, setCurrentDay, loadTableData, setDays} from "../../redux/actions/tableActions";
+import {
+    changeWeek,
+    setCurrentWeek,
+    setCurrentDay,
+    loadTableData,
+    setDays,
+    setFull,
+    setHalf,
+    setFinanceReport,
+    setTaskReport,
+    setTableReport
+} from "../../redux/actions/tableActions";
 import {loadPeopleTree} from "../../redux/actions/subordinateActions";
 import {loadDepTree} from "../../redux/actions/Admin/departmentActions";
 import {
@@ -22,6 +33,8 @@ import {
 
 const mapStateToProps = (state, ownProps) => {
     return {
+        // half: ownProps,
+        half: state.Table.half,
         finances: state.finances,
         currentTasks: state.Reports.reportTasks,
         currentWeek: state.Table.currentWeek,
@@ -30,6 +43,7 @@ const mapStateToProps = (state, ownProps) => {
         Y: state.User,
         departments: state.Admin.departments,
         department: state.Admin.department,
+        typeReport: state.Table.typeReport
     }
 }
 
@@ -70,8 +84,9 @@ const mapDispatchToProps = (dispatch) => {
             obj.finance_ids = state.finance_ids;
             dispatch(createFinanceReport(obj));
         },
-        createUserReport: (state) => {
+        createUserReport: (state, half) => {
             let obj = {};
+            obj.half = half;
             obj.user_ids = state.user_ids;
             dispatch(createUserReport(obj));
         },
@@ -125,6 +140,21 @@ const mapDispatchToProps = (dispatch) => {
         },
         changeLastWeek: (date) => {
             dispatch(setDays({last: date}));
+        },
+        setFull: () => {
+            dispatch(setFull())
+        },
+        setHalf: () => {
+            dispatch(setHalf())
+        },
+        setFinanceReport: () =>{
+            dispatch(setFinanceReport())
+        },
+        setTaskReport: () =>{
+            dispatch(setTaskReport())
+        },
+        setTableReport: () =>{
+            dispatch(setTableReport())
         },
     }
 }

@@ -98,15 +98,7 @@ export default class Labors extends React.Component {
         }
     }
 
-    add2Obj(first, second) {
-        var third = [];
-        var temp = [...new Set(first.concat(second.map(x => ({value: x.id, label: x.name}))).map(x => x.label))];
-        for (var i in temp) {
-            third.push({label: temp[i]})
-        }
-        console.log(third);
-        return third;
-    }
+
 
     loadPie() {
         this.setState({
@@ -165,7 +157,6 @@ export default class Labors extends React.Component {
     }
 
     handleSelectChange(vals) {
-        console.log(vals);
         const user_ids = vals.map(x => x.value);
         this.props.getTasksForUsers(user_ids);
         this.setState({
@@ -292,6 +283,7 @@ export default class Labors extends React.Component {
                         placeholder="Задачи"
                         value={this.state.selectedTasks}
                         onChange={this.handleTaskSelectChange.bind(this)}
+                        style={{display:'block', overflow:'auto'}}
                         options={this.props.currentTasks}
                     />
                 )
@@ -301,8 +293,9 @@ export default class Labors extends React.Component {
                     <Select value={this.state.selectedCodes}
                             multi={true}
                             placeholder="Коды работ"
-                            value={this.state.selectedCodes}
+                            // value={this.state.selectedCodes}
                             onChange={this.handleCodesSelectChange.bind(this)}
+                            style={{display:'block', overflow:'auto'}}
                             options={
                                 this.props.codes
                             } // <-- Receive options from the form
@@ -376,7 +369,7 @@ export default class Labors extends React.Component {
             </div>
         )
 
-        console.log("props",props)
+        // console.log("props",props)
 
         return (
             <Container vertical={true}>
@@ -422,6 +415,7 @@ export default class Labors extends React.Component {
                                   ignoreCase={true}
                                   onFocus={this.disableClick.bind(this, true)}
                                   onBlur={this.disableClick.bind(this, false)}
+                                  style={{display:'block', overflow:'auto'}}
                                   loadOptions={debouncedFetch}/>
                 </div>
 

@@ -23,22 +23,18 @@ export default class RightTaskPanel extends React.Component {
 
   render() {
     const props = this.props;
+    console.log("props", props)
     var chiefName = '';
     var chiefPosition = '';
-    console.log("RIGHT PANEL PROPS, ", props)
-      // try {
-      //     console.log(props.department.chiefs);
-      // } catch(ex){
-          // console.log(123);
-      // }
-    // }
-    // console.log("(((((((((((");
+    const chosenDays = props.chosenDays;
+    const typeReport = props.typeReport;
     const firstDay = props.weekPeriod.first;
     const lastDay = props.weekPeriod.last;
     const currentWeek = props.currentWeek;
     let reportsTable = props.reportsTable;
     const userName = props.name;
     const userPosition = props.position;
+    const half = props.half;
     if (props.department){
         chiefName = props.department.chiefs[0].name;
         chiefPosition = props.department.chiefs[0].position;
@@ -46,9 +42,12 @@ export default class RightTaskPanel extends React.Component {
 
     if(!reportsTable.users && reportsTable[0] !== "none") {
         const range = thelpers.getDateRange(props.currentWeek);
-        console.log("range", range)
+        // console.log("range", range)
         // const dateRangeWords = "c " + moment(range.first).format("DD MMMM") + " по " + moment(range.last).format("DD MMMM");
-        const dateRangeWords = "c " + moment(firstDay).format("DD MMMM") + " по " + moment(lastDay).format("DD MMMM");
+        var dateRangeWords;
+             dateRangeWords = "c " + moment(chosenDays.first).format("DD MMMM") + " по " + moment(chosenDays.last).format("DD MMMM");
+
+
         if(props.reportsTable.data.length) {
           let table = helpers.getTasksReportTable(reportsTable);
           const exportToExcel = helpers.exportReportToExcel;
@@ -67,9 +66,20 @@ export default class RightTaskPanel extends React.Component {
                 const exportHtmlToExcel = helpers.exportHtmlToExcel;
       if(props.reportsTable.users && props.reportsTable.users[0].days.length) {
         let range = getDateMonthRange(currentWeek);
-        const dateRangeWords = "c " + moment(range.first).format("DD") + " по " + moment(range.last).format("DD MMMM") + " " +  moment(range.last).format("YYYY") + "г";
+          var dateRangeWords;
+          if (typeReport == "table") {
+              if (half == 0) {
+                  dateRangeWords = "c " + moment(range.first).format("DD MMMM") + " по " + moment(range.last).format("DD MMMM");
+              }
+              else {
+
+                  dateRangeWords = "c " + moment(range.first).format("DD MMMM") + " по " + moment(range.middle).format("DD MMMM");
+                  console.log("dateRangeWords", dateRangeWords)
+              }
+          }
+        // const dateRangeWords = "c " + moment(range.first).format("DD") + " по " + moment(range.last).format("DD MMMM") + " " +  moment(range.last).format("YYYY") + "г";
         // let table = thelpers.generateUserReportTable(props.reportsTable.users, dateRangeWords);
-        let table = thelpers.generateUserReportTable(props.reportsTable.users, dateRangeWords, userName, userPosition, chiefName, chiefPosition);
+        let table = thelpers.generateUserReportTable(props.reportsTable.users, dateRangeWords, userName, userPosition, chiefName, chiefPosition, half);
         return (
           <Container vertical={true}>
             <div flex="1" className="reportHeaderContainer">
